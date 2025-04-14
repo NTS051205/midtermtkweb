@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - NEU Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .careers-hero {
+            background: linear-gradient(135deg, rgba(41, 98, 255, 0.95), rgba(0, 150, 255, 0.95)),
+                        url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655') center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .careers-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .jobs-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .careers-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(41, 98, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(41, 98, 255, 0.2);
+        }
+
+        .job-info {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .job-info h3 {
+            color: var(--heading-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .job-tag {
+            background: rgba(41, 98, 255, 0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .application-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .application-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(41, 98, 255, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--heading-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(41, 98, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(41, 98, 255, 0.1);
+            outline: none;
+        }
+
+        .file-upload {
+            display: none;
+        }
+
+        .file-upload-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(41, 98, 255, 0.1);
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-label:hover {
+            background: rgba(41, 98, 255, 0.2);
+        }
+
+        .file-name {
+            display: block;
+            margin-top: 0.5rem;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        /* Dark mode styles */
+        [data-theme="dark"] .careers-section,
+        [data-theme="dark"] .application-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        [data-theme="dark"] .filter-btn {
+            background: #2d2d2d;
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        [data-theme="dark"] .job-card,
+        [data-theme="dark"] .application-form {
+            background: #2d2d2d;
+            border-color: rgba(41, 98, 255, 0.2);
+        }
+
+        [data-theme="dark"] .form-control {
+            background: #1a1a1a;
+            border-color: rgba(41, 98, 255, 0.3);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .file-upload-label {
+            background: rgba(41, 98, 255, 0.2);
+        }
+
+        .apply-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #4a90e2, #34a853);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+            margin: 1rem auto;
+            width: auto;
+            min-width: 150px;
+        }
+
+        .apply-btn:hover {
+            background: linear-gradient(135deg, #34a853, #4a90e2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+        }
+
+        /* Dark mode styles for apply button */
+        [data-theme="dark"] .apply-btn {
+            background: linear-gradient(135deg, #2962ff, #00c853);
+            box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
+        }
+
+        [data-theme="dark"] .apply-btn:hover {
+            background: linear-gradient(135deg, #00c853, #2962ff);
+            box-shadow: 0 6px 20px rgba(41, 98, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#2196f3"/>
+                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
+                </svg>
+                <span>NEU Learning</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="careers.html" class="active">Careers</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="careers-hero">
+        <div class="hero-content">
+            <h1 style="color: white; font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Join Our Team</h1>
+            <p style="color: white; font-size: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Build your career with NEU Learning</p>
+        </div>
+    </section>
+
+    <section class="careers-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Open Positions</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+                Explore exciting career opportunities at NEU Learning and be part of our mission to transform education.
+            </p>
+            
+            <div class="jobs-filters">
+                <button class="filter-btn active" data-department="all">All Departments</button>
+                <button class="filter-btn" data-department="engineering">Engineering</button>
+                <button class="filter-btn" data-department="education">Education</button>
+                <button class="filter-btn" data-department="marketing">Marketing</button>
+            </div>
+
+            <div class="careers-grid">
+                <div class="job-card" data-department="engineering">
+                    <div class="job-info">
+                        <h3>Senior Full Stack Developer</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                            <span><i class="fas fa-clock"></i> Full-time</span>
+                            <span><i class="fas fa-building"></i> Engineering</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag">React</span>
+                            <span class="job-tag">Node.js</span>
+                            <span class="job-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card" data-department="education">
+                    <div class="job-info">
+                        <h3>Course Content Developer</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Hybrid</span>
+                            <span><i class="fas fa-clock"></i> Full-time</span>
+                            <span><i class="fas fa-building"></i> Education</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag">Curriculum Design</span>
+                            <span class="job-tag">E-learning</span>
+                            <span class="job-tag">Teaching</span>
+                        </div>
+                    </div>
+                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                </div>
+
+                <div class="job-card" data-department="marketing">
+                    <div class="job-info">
+                        <h3>Digital Marketing Manager</h3>
+                        <div class="job-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> On-site</span>
+                            <span><i class="fas fa-clock"></i> Full-time</span>
+                            <span><i class="fas fa-building"></i> Marketing</span>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag">SEO</span>
+                            <span class="job-tag">Social Media</span>
+                            <span class="job-tag">Analytics</span>
+                        </div>
+                    </div>
+                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="application-section" id="application-form">
+        <div class="container">
+            <h2 style="text-align: center;">Apply Now</h2>
+            <p style="text-align: center; max-width: 800px; margin: 1rem auto;">
+                Take the first step towards joining our team. Fill out the application form below.
+            </p>
+            <form class="application-form">
+                <div class="form-group">
+                    <label for="position">Position*</label>
+                    <select class="form-control" id="position" required>
+                        <option value="">Select a position</option>
+                        <option value="developer">Senior Full Stack Developer</option>
+                        <option value="content">Course Content Developer</option>
+                        <option value="marketing">Digital Marketing Manager</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume/CV*</label>
+                    <input type="file" id="resume" class="file-upload" accept=".pdf,.doc,.docx" required>
+                    <label for="resume" class="file-upload-label">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose File
+                    </label>
+                    <span class="file-name"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cover-letter">Cover Letter</label>
+                    <textarea class="form-control" id="cover-letter" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="portfolio">Portfolio URL</label>
+                    <input type="url" class="form-control" id="portfolio">
+                </div>
+                <button type="submit" class="apply-btn" style="border: none; cursor: pointer;">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: careers@neulearning.edu</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Job filtering
+            const filterButtons = document.querySelectorAll('.jobs-filters .filter-btn');
+            const jobCards = document.querySelectorAll('.job-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const department = button.dataset.department;
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filter jobs
+                    jobCards.forEach(card => {
+                        if (department === 'all' || card.dataset.department === department) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // File upload handling
+            const fileUpload = document.getElementById('resume');
+            const fileName = document.querySelector('.file-name');
+
+            fileUpload.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    fileName.textContent = e.target.files[0].name;
+                } else {
+                    fileName.textContent = '';
+                }
+            });
+
+            // Form submission
+            const form = document.querySelector('.application-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Here you would typically handle the form submission with AJAX
+                alert('Thank you for your application! We will review it and get back to you soon.');
+                form.reset();
+                fileName.textContent = '';
+            });
+
+            // Smooth scroll to application form
+            document.querySelectorAll('a[href="#application-form"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NEU Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, rgba(41, 98, 255, 0.95), rgba(0, 150, 255, 0.95)),
+                        url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(41, 98, 255, 0.8), rgba(0, 150, 255, 0.8));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .mission-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .mission-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(41, 98, 255, 0.1);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(41, 98, 255, 0.2);
+        }
+
+        .mission-card i {
+            font-size: 3rem;
+            color: #2962ff;
+            margin-bottom: 1.5rem;
+            background: rgba(41, 98, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+
+        .stats-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #2962ff 0%, #0039cb 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .team-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .team-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(41, 98, 255, 0.1);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(41, 98, 255, 0.2);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.4rem;
+            color: #2962ff;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .team-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(41, 98, 255, 0.1);
+            color: #2962ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .team-social a:hover {
+            background: #2962ff;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .history-section {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: #2962ff;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            margin-bottom: 2rem;
+            width: 50%;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 30px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            border: 1px solid rgba(41, 98, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(41, 98, 255, 0.2);
+        }
+
+        .timeline-date {
+            color: #2962ff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-dot {
+            width: 25px;
+            height: 25px;
+            background: #2962ff;
+            border-radius: 50%;
+            position: absolute;
+            right: -12px;
+            top: 20px;
+            box-shadow: 0 0 0 5px rgba(41, 98, 255, 0.2);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            right: auto;
+            left: -12px;
+        }
+
+        @media (max-width: 768px) {
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 30px;
+                justify-content: flex-start;
+            }
+
+            .timeline-item:nth-child(even) {
+                align-self: flex-start;
+            }
+
+            .timeline-dot {
+                left: -12px;
+                right: auto;
+            }
+        }
+
+        /* Dark mode styles */
+        [data-theme="dark"] .mission-section,
+        [data-theme="dark"] .team-section,
+        [data-theme="dark"] .history-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        [data-theme="dark"] .mission-card,
+        [data-theme="dark"] .team-card,
+        [data-theme="dark"] .timeline-content {
+            background: #2d2d2d;
+            border-color: rgba(41, 98, 255, 0.2);
+        }
+
+        [data-theme="dark"] .stats-section {
+            background: linear-gradient(135deg, #0039cb 0%, #002171 100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#2196f3"/>
+                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
+                </svg>
+                <span>NEU Learning</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+    </header>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>About NEU Learning</h1>
+            <p>Transforming education through innovation and excellence</p>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Our Mission & Values</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+                We are dedicated to making quality education accessible to everyone, everywhere. 
+                Our mission is to transform lives through learning.
+            </p>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3 style="color: var(--heading-color); font-size: 1.5rem; font-weight: 600;">Mission</h3>
+                    <p style="color: var(--text-color); line-height: 1.6;">To provide accessible, high-quality education that empowers individuals to achieve their full potential.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-eye"></i>
+                    <h3 style="color: var(--heading-color); font-size: 1.5rem; font-weight: 600;">Vision</h3>
+                    <p style="color: var(--text-color); line-height: 1.6;">To be the world's leading platform for online education, fostering a global community of lifelong learners.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 style="color: var(--heading-color); font-size: 1.5rem; font-weight: 600;">Values</h3>
+                    <p style="color: var(--text-color); line-height: 1.6;">Excellence, Innovation, Inclusivity, and Continuous Learning guide everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-target="100000">0</div>
+                <p>Students Worldwide</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="500">0</div>
+                <p>Expert Instructors</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="1000">0</div>
+                <p>Online Courses</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-target="50">0</div>
+                <p>Countries Reached</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Our Leadership Team</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+                Meet the dedicated professionals who make NEU Learning possible.
+            </p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="John Smith" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">John Smith</h3>
+                        <p class="team-role">Chief Executive Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Sarah Johnson" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Sarah Johnson</h3>
+                        <p class="team-role">Chief Technology Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Michael Chen" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Michael Chen</h3>
+                        <p class="team-role">Head of Education</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956" alt="Emily Davis" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Emily Davis</h3>
+                        <p class="team-role">Chief Marketing Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Our Journey</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+                From our humble beginnings to where we are today, discover the milestones that have shaped NEU Learning.
+            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2020</div>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">The Beginning</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">NEU Learning was founded with a vision to make quality education accessible to everyone.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2021</div>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Rapid Growth</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Reached our first 10,000 students and expanded our course offerings.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2022</div>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Global Expansion</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Launched operations in multiple countries and introduced new learning technologies.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2023</div>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Innovation Award</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Received recognition for our innovative approach to online education.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2024</div>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">AI Integration</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Implemented advanced AI-powered learning features to enhance student experience.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@neulearning.edu</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+    <script>
+        // Theme switching functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            if (theme === 'dark') {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        }
+
+        // Animate statistics numbers
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current).toLocaleString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.textContent = target.toLocaleString();
+                    }
+                };
+
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+
+                observer.observe(stat);
+            });
+        }
+
+        // Initialize animations when the page loads
+        document.addEventListener('DOMContentLoaded', animateStats);
+    </script>
+</body>
+</html>

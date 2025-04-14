@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - NEU Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .course-header {
+            margin-top: 80px;
+            padding: 4rem 5%;
+            background: var(--light-gray);
+        }
+
+        .course-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .course-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+            color: #666;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .enrollment-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 100px;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .enroll-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+        }
+
+        .enroll-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        .course-features {
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item i {
+            color: var(--primary-color);
+        }
+
+        .course-content {
+            padding: 4rem 5%;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 3rem;
+        }
+
+        .course-tabs {
+            margin-bottom: 2rem;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .curriculum-item {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .curriculum-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .curriculum-content {
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .curriculum-content.active {
+            display: block;
+        }
+
+        .instructor-profile {
+            display: flex;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: 2rem;
+        }
+
+        .instructor-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .review-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .rating {
+            color: gold;
+        }
+
+        @media (max-width: 768px) {
+            .course-header-content,
+            .content-container {
+                grid-template-columns: 1fr;
+            }
+
+            .enrollment-card {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#2196f3"/>
+                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
+                </svg>
+                <span>NEU Learning</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="course-header">
+        <div class="course-header-content">
+            <div class="course-info">
+                <h1 id="courseTitle">Course Title</h1>
+                <p id="courseDescription">Course description will be loaded here.</p>
+                <div class="course-meta">
+                    <span><i class="far fa-clock"></i> <span id="courseDuration">Duration</span></span>
+                    <span><i class="fas fa-user-graduate"></i> <span id="courseStudents">500+ Students</span></span>
+                    <span><i class="fas fa-star"></i> <span id="courseRating">4.8 (120 Reviews)</span></span>
+                </div>
+                <div class="course-tags" id="courseTags">
+                    <!-- Tags will be loaded here -->
+                </div>
+            </div>
+            <div class="enrollment-card">
+                <div class="price-tag" id="coursePrice">$99</div>
+                <button class="enroll-btn">Enroll Now</button>
+                <div class="course-features">
+                    <div class="feature-item">
+                        <i class="fas fa-video"></i>
+                        <span>20+ Hours of Video</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Downloadable Resources</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate of Completion</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-infinity"></i>
+                        <span>Lifetime Access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="content-container">
+            <div class="main-content">
+                <div class="course-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="curriculum">Curriculum</button>
+                        <button class="tab-btn" data-tab="instructor">Instructor</button>
+                        <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    </div>
+
+                    <div class="tab-content active" id="curriculum">
+                        <div class="curriculum-item">
+                            <div class="curriculum-header">
+                                <h3>Module 1: Introduction</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="curriculum-content">
+                                <ul>
+                                    <li>Course Overview</li>
+                                    <li>Setting Up Your Environment</li>
+                                    <li>Basic Concepts</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- More curriculum items -->
+                    </div>
+
+                    <div class="tab-content" id="instructor">
+                        <div class="instructor-profile">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5" alt="Instructor" class="instructor-image">
+                            <div>
+                                <h3>John Smith</h3>
+                                <p>Senior Developer & Instructor</p>
+                                <p>15+ years of experience in web development and teaching. Expert in modern web technologies and best practices.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="reviews">
+                        <div class="review">
+                            <div class="review-header">
+                                <div class="review-author">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Reviewer">
+                                    <div>
+                                        <h4>Sarah Johnson</h4>
+                                        <p>2 months ago</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p>Excellent course! The content is well-structured and the instructor explains complex concepts clearly.</p>
+                        </div>
+                        <!-- More reviews -->
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <!-- Additional content or widgets can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@neulearning.edu</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+    <script>
+        // Get course ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('id');
+
+        // Fetch course data (simulated)
+        const course = courses.find(c => c.id === parseInt(courseId)) || courses[0];
+
+        // Populate course details
+        document.getElementById('courseTitle').textContent = course.title;
+        document.getElementById('courseDescription').textContent = course.description;
+        document.getElementById('courseDuration').textContent = course.duration;
+        document.getElementById('coursePrice').textContent = course.price;
+
+        // Add tags
+        const tagsContainer = document.getElementById('courseTags');
+        course.tags.forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.className = 'course-tag';
+            tagSpan.textContent = tag;
+            tagsContainer.appendChild(tagSpan);
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                document.querySelector('.tab-btn.active').classList.remove('active');
+                button.classList.add('active');
+
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById(tabId).style.display = 'block';
+            });
+        });
+
+        // Curriculum accordion
+        document.querySelectorAll('.curriculum-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+                const icon = header.querySelector('i');
+                icon.classList.toggle('fa-chevron-up');
+                icon.classList.toggle('fa-chevron-down');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - NEU Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .courses-hero {
+            background: linear-gradient(rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.7)),
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3') center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .filters {
+            padding: 2rem 5%;
+            background: var(--light-gray);
+        }
+
+        .filter-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .courses-grid {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform var(--transition-speed);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 1.5rem;
+        }
+
+        .course-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-tag {
+            background: var(--light-gray);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .course-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .course-price {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .course-duration {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-bar i {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#2196f3"/>
+                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
+                </svg>
+                <span>NEU Learning</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="login.html" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="courses-hero">
+        <div class="hero-content">
+            <h1>Our Courses</h1>
+            <p>Discover your path to success with our expert-led courses</p>
+        </div>
+    </section>
+
+    <section class="filters">
+        <div class="search-bar">
+            <input type="text" placeholder="Search courses..." id="courseSearch">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="development">Development</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="marketing">Marketing</button>
+        </div>
+    </section>
+
+    <section class="courses-grid" id="coursesGrid">
+        <!-- Course cards will be dynamically populated -->
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@neulearning.edu</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="style.js"></script>
+    <script>
+        // Course data
+        const courses = [
+            {
+                id: 1,
+                title: 'Web Development Fundamentals',
+                description: 'Learn HTML, CSS, and JavaScript from scratch',
+                image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+                price: '$99',
+                duration: '12 weeks',
+                category: 'development',
+                tags: ['HTML', 'CSS', 'JavaScript']
+            },
+            {
+                id: 2,
+                title: 'UI/UX Design Essentials',
+                description: 'Master the principles of user interface design',
+                image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5',
+                price: '$129',
+                duration: '8 weeks',
+                category: 'design',
+                tags: ['UI', 'UX', 'Design']
+            },
+            {
+                id: 3,
+                title: 'Digital Marketing Strategy',
+                description: 'Learn to create effective digital marketing campaigns',
+                image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a',
+                price: '$149',
+                duration: '10 weeks',
+                category: 'marketing',
+                tags: ['Marketing', 'Social Media']
+            },
+            {
+                id: 4,
+                title: 'Business Analytics',
+                description: 'Master data analysis for business decisions',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
+                price: '$199',
+                duration: '14 weeks',
+                category: 'business',
+                tags: ['Analytics', 'Business']
+            }
+        ];
+
+        // Function to create course cards
+        function createCourseCard(course) {
+            return `
+                <div class="course-card" data-category="${course.category}">
+                    <img src="${course.image}" alt="${course.title}" class="course-image">
+                    <div class="course-content">
+                        <div class="course-tags">
+                            ${course.tags.map(tag => `<span class="course-tag">${tag}</span>`).join('')}
+                        </div>
+                        <h3>${course.title}</h3>
+                        <p>${course.description}</p>
+                        <div class="course-info">
+                            <span class="course-price">${course.price}</span>
+                            <span class="course-duration"><i class="far fa-clock"></i> ${course.duration}</span>
+                        </div>
+                        <a href="course-detail.html?id=${course.id}" class="cta-button" style="display: inline-block; margin-top: 1rem;">Learn More</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize courses
+        function initializeCourses() {
+            const coursesGrid = document.getElementById('coursesGrid');
+            coursesGrid.innerHTML = courses.map(course => createCourseCard(course)).join('');
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+
+                // Filter courses
+                const courseCards = document.querySelectorAll('.course-card');
+                courseCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('courseSearch').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const courseCards = document.querySelectorAll('.course-card');
+
+            courseCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Initialize courses when the page loads
+        document.addEventListener('DOMContentLoaded', initializeCourses);
+    </script>
+</body>
+</html>
