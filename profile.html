@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEU Learning - Profile</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232196f3'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='40'%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2196f3;
+            --gradient-1: linear-gradient(135deg, #2196f3, #4dabf7);
+            --gradient-2: linear-gradient(135deg, #ffffff, #f8f9fa);
+            --dark-color: #333;
+            --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            --profile-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+        }
+
+        body {
+            background: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .profile-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            gap: 2rem;
+            margin-top: 80px;
+        }
+
+        /* Sidebar styles */
+        .profile-sidebar {
+            width: 280px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: var(--profile-shadow);
+            border: 1px solid #eee;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .user-info-card {
+            background: #ffffff;
+            color: #333;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .user-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid #e3f2fd;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .user-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-registered {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .sidebar-menu {
+            padding: 1rem;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 0.875rem 1.25rem;
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin-bottom: 0.375rem;
+            font-weight: 500;
+        }
+
+        .menu-item i {
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            color: #90a4ae;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background: #e3f2fd;
+            color: var(--primary-color);
+        }
+
+        .menu-item:hover i {
+            color: var(--primary-color);
+        }
+
+        .menu-item.active {
+            background: #e3f2fd;
+            color: var(--primary-color);
+        }
+
+        .menu-item.active i {
+            color: var(--primary-color);
+        }
+
+        /* Main content styles */
+        .profile-content {
+            flex: 1;
+            max-width: 850px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .credit-card {
+            background: var(--gradient-1);
+            border-radius: 15px;
+            padding: 2rem;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-number {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .card-holder, .card-expiry {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-bottom: 0.3rem;
+        }
+
+        .value {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .card-type {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        .card-type img {
+            height: 40px;
+            width: auto;
+        }
+
+        .add-card {
+            border: 2px dashed #e0e0e0;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .add-card:hover {
+            border-color: var(--primary-color);
+            background: rgba(33, 150, 243, 0.05);
+        }
+
+        .add-card-btn {
+            background: none;
+            border: none;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .add-card-btn i {
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .add-card-btn:hover {
+            color: var(--primary-color);
+        }
+
+        .add-card-btn:hover i {
+            color: var(--primary-color);
+        }
+
+        /* Profile Dropdown Menu Styles */
+        .user-profile {
+            position: relative;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .user-profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #e3f2fd;
+        }
+
+        .profile-dropdown {
+            position: absolute;
+            top: 120%;
+            right: 0;
+            width: 280px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            color: black; /* Set default text color to black */
+
+        }
+
+        .user-profile:hover .profile-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .profile-dropdown a:hover {
+            color: #007bff; /* Change text color on hover */
+            background: #f8f9fa;
+        }
+        .dropdown-header {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        .dropdown-header h4 {
+            margin: 0;
+            color: #000; /* Đổi màu chữ thành đen */
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .dropdown-header p {
+            margin: 5px 0 0;
+            color: #000; /* Đổi màu chữ thành xám đậm */
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content {
+            padding: 10px 0;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #000; /* Đổi màu chữ thành xám đậm */
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: #f8f9fa;
+            color: #007bff; /* Đổi màu chữ khi hover thành xanh */
+        }
+
+        .dropdown-item.active {
+            background: #e3f2fd;
+            color: #007bff; /* Đổi màu chữ khi active thành xanh */
+        }
+
+        .dropdown-item i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            color: inherit;
+        }
+
+        /* Info Grid Styles */
+        .info-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: var(--profile-shadow);
+            border: 1px solid #eee;
+        }
+
+        .info-item-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .info-item-label i {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+        }
+
+        .info-item-value {
+            color: #333;
+            font-weight: 500;
+        }
+
+        .info-item-edit {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .info-item-edit:hover {
+            background: rgba(33, 150, 243, 0.1);
+        }
+
+        .info-item-edit i {
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="#2196f3"/>
+                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
+                </svg>
+                <span>NEU Learning</span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="news.html">Tin Tức</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <!-- Login/Profile section -->
+                <li class="auth-section">
+                    <a href="login.html" class="login-btn" id="loginButton" style="display: none;">Đăng Nhập</a>
+                    <!-- User Profile Dropdown -->
+                    <div class="user-profile" id="userProfile">
+                        <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="headerAvatar">
+                        <div class="profile-dropdown">
+                            <div class="dropdown-header">
+                                <h4 id="headerUserName">Nguyễn Sơn</h4>
+                                <p id="headerUserEmail">nguyentienson0512@gmail.com</p>
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="profile.html" class="dropdown-item active">
+                                    <i class="fas fa-user"></i> Profile
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-heart"></i> Favourite list
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-moon"></i> Dark mode
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #eee;">
+                                <a href="#" class="dropdown-item logout" id="logoutButton">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-sun light-icon"></i>
+                        <i class="fas fa-moon dark-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <!-- Sidebar -->
+        <div class="profile-sidebar">
+            <div class="user-info-card">
+                <div class="user-avatar">
+                    <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="profileAvatar">
+                </div>
+                <h2 class="user-name">Nguyễn Sơn</h2>
+                <p class="user-registered">Registered: 17th May 2022</p>
+            </div>
+            <div class="sidebar-menu">
+                <a href="#manage-account" class="menu-item active">
+                    <i class='bx bx-user'></i>
+                    <span>Personal info</span>
+                </a>
+                <a href="#addresses" class="menu-item">
+                    <i class='bx bx-map'></i>
+                    <span>Addresses</span>
+                </a>
+                <a href="#communications" class="menu-item">
+                    <i class='bx bx-bell'></i>
+                    <span>Notifications</span>
+                </a>
+                <a href="#my-courses" class="menu-item">
+                    <i class='bx bx-book-open'></i>
+                    <span>My Courses</span>
+                </a>
+                <a href="#my-certificates" class="menu-item">
+                    <i class='bx bx-certification'></i>
+                    <span>Certificates</span>
+                </a>
+                <a href="#favorites" class="menu-item">
+                    <i class='bx bx-heart'></i>
+                    <span>Favorites</span>
+                </a>
+                <hr style="margin: 1rem 0; border: none; border-top: 1px solid #f0f0f0;">
+                <a href="#help" class="menu-item">
+                    <i class='bx bx-help-circle'></i>
+                    <span>Help Center</span>
+                </a>
+                <a href="#settings" class="menu-item">
+                    <i class='bx bx-cog'></i>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <!-- Payment Methods -->
+            <section id="payment-methods">
+                <h2 class="section-title">Payment Methods</h2>
+                <div class="cards-grid">
+                    <div class="credit-card">
+                        <div class="card-content">
+                            <div class="card-number">**** **** **** 3456</div>
+                            <div class="card-info">
+                                <div class="card-holder">
+                                    <span class="label">Card Holder</span>
+                                    <span class="value">Nguyễn Sơn</span>
+                                </div>
+                                <div class="card-expiry">
+                                    <span class="label">Expires</span>
+                                    <span class="value">10/25</span>
+                                </div>
+                            </div>
+                            <div class="card-type">
+                                <i class="fab fa-cc-visa fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="credit-card">
+                        <div class="card-content">
+                            <div class="card-number">**** **** **** 7654</div>
+                            <div class="card-info">
+                                <div class="card-holder">
+                                    <span class="label">Card Holder</span>
+                                    <span class="value">Nguyễn Sơn</span>
+                                </div>
+                                <div class="card-expiry">
+                                    <span class="label">Expires</span>
+                                    <span class="value">03/26</span>
+                                </div>
+                            </div>
+                            <div class="card-type">
+                                <i class="fab fa-cc-visa fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-card">
+                        <button class="add-card-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>Add New Card</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Info -->
+            <section id="account-info">
+                <h2 class="section-title">Account Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-item-label">
+                            <i class='bx bx-envelope'></i>
+                            Email Address
+                        </div>
+                        <div class="info-item-value">nguyentienson0512@gmail.com</div>
+                        <button class="info-item-edit">
+                            <i class='bx bx-edit-alt'></i>
+                        </button>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-label">
+                            <i class='bx bx-phone'></i>
+                            Phone Number
+                        </div>
+                        <div class="info-item-value">+84 584466xxx</div>
+                        <button class="info-item-edit">
+                            <i class='bx bx-edit-alt'></i>
+                        </button>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-label">
+                            <i class='bx bx-map'></i>
+                            Address
+                        </div>
+                        <div class="info-item-value">Minh Khai, Hai Ba Trung, Ha Noi</div>
+                        <button class="info-item-edit">
+                            <i class='bx bx-edit-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu item click handling
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                });
+            });
+
+            // Add card button handling
+            const addCardBtn = document.querySelector('.add-card-btn');
+            if (addCardBtn) {
+                addCardBtn.addEventListener('click', () => {
+                    alert('Add new card functionality will be implemented soon!');
+                });
+            }
+
+            // Edit info button handling
+            const editButtons = document.querySelectorAll('.info-item-edit');
+            editButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const infoItem = btn.closest('.info-item');
+                    const label = infoItem.querySelector('.info-item-label').textContent.trim();
+                    const currentValue = infoItem.querySelector('.info-item-value').textContent.trim();
+                    const newValue = prompt(`Edit ${label}:`, currentValue);
+                    
+                    if (newValue && newValue !== currentValue) {
+                        infoItem.querySelector('.info-item-value').textContent = newValue;
+                    }
+                });
+            });
+
+            // Load user data
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                document.querySelector('.user-name').textContent = currentUser.name || 'Nguyễn Sơn';
+                if (currentUser.avatar) {
+                    document.querySelector('#profileAvatar').src = currentUser.avatar;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
