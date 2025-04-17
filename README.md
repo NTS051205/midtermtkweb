@@ -140,7 +140,7 @@ npm run deploy
 - v1.1.0 - Thêm tính năng mới
 
 ## Tác giả
-- **Nguyễn Tiến Sơn** 
+- **Nguyễn Tiến Sơn** - **NEU**
 
 ## License
 Dự án này được cấp phép theo giấy phép MIT - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
