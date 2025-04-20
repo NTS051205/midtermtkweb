@@ -182,7 +182,44 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li><a href="login.html" class="login-btn">Login</a></li>
+                <!-- Login/Profile section -->
+                <li class="auth-section">
+                    <a href="login.html" class="login-btn" id="loginButton">Đăng Nhập</a>
+                    <!-- User Profile Dropdown (hidden by default) -->
+                    <div class="user-profile" id="userProfile" style="display: none;">
+                        <div class="user-avatar">
+                            <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="userAvatar">
+                            <div class="profile-dropdown">
+                                <div class="dropdown-header">
+                                    <span id="userName">John Smith</span>
+                                    <span id="userEmail">@johnsmith</span>
+                                </div>
+                                <a href="profile.html" class="dropdown-item">
+                                    <i class="fas fa-user"></i> Profile
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-heart"></i> Favourite list
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-moon"></i> Dark mode
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <hr>
+                                <a href="#" class="dropdown-item logout" id="logoutButton">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="fas fa-sun light-icon"></i>
+                        <i class="fas fa-moon dark-icon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
