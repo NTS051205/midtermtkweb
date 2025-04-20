@@ -611,7 +611,7 @@ footer::before {
         transform: translateX(-50%) translateY(10px);
         min-width: 220px;
         width: 90vw;
-        max-width: 320px.
+        max-width: 320px;
     }
     .theme-toggle {
         position: absolute;
@@ -686,7 +686,7 @@ footer::before {
         position: static;
     }
     .profile-content {
-        max-width: 100%.
+        max-width: 100%;
     }
     .cards-grid {
         grid-template-columns: 1fr !important;
@@ -701,19 +701,19 @@ footer::before {
     }
     .enrollment-card {
         position: static;
-        margin-top: 1rem.
+        margin-top: 1rem;
     }
     .sidebar {
-        display: none.
+        display: none;
     }
     .timeline {
         max-width: 100%;
         margin: 2rem 0 0 0;
-        padding: 0 0.5rem.
+        padding: 0 0.5rem;
     }
     .timeline::before {
         left: 20px;
-        transform: none.
+        transform: none;
     }
     .timeline-item {
         width: 100%;
@@ -721,7 +721,7 @@ footer::before {
         margin-bottom: 2rem;
         justify-content: flex-start;
         flex-direction: column;
-        align-items: flex-start.
+        align-items: flex-start;
     }
     .timeline-item:nth-child(even) {
         align-self: flex-start;
@@ -731,13 +731,13 @@ footer::before {
     .timeline-dot {
         left: 8px;
         right: auto;
-        top: 20px.
+        top: 20px;
     }
     .timeline-content {
         width: 100%;
         min-width: 0;
         margin-left: 0;
-        box-sizing: border-box.
+        box-sizing: border-box;
     }
 }
 
@@ -745,11 +745,11 @@ footer::before {
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-20px).
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0).
+        transform: translateY(0);
     }
 }
 
@@ -760,25 +760,25 @@ footer::before {
         --text-light: #ced4da;
         --light-gray: #212529;
         --dark-gray: #1a1a1a;
-        --white: #212529.
+        --white: #212529;
     }
 
     body {
-        background: #121212.
+        background: #121212;
     }
 
     .navbar {
         background: rgba(33, 37, 41, 0.95);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1).
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .feature-card {
         background: #1a1a1a;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3).
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .feature-card:hover {
-        box-shadow: 0 20px 40px rgba(67, 97, 238, 0.2).
+        box-shadow: 0 20px 40px rgba(67, 97, 238, 0.2);
     }
 }
 
@@ -786,7 +786,7 @@ footer::before {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem.
+    padding: 0 2rem;
 }
 
 .text-gradient {
@@ -794,7 +794,7 @@ footer::before {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text.
+    background-clip: text;
 }
 
 .glass-effect {
@@ -802,7 +802,7 @@ footer::before {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1).
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle {
@@ -884,28 +884,28 @@ footer::before {
 /* Dark mode specific styles */
 [data-theme="dark"] .navbar {
     background: rgba(26, 26, 26, 0.95);
-    border-bottom: 1px solid rgba(41, 98, 255, 0.1).
+    border-bottom: 1px solid rgba(41, 98, 255, 0.1);
 }
 
 [data-theme="dark"] .mission-card,
 [data-theme="dark"] .team-card,
 [data-theme="dark"] .timeline-content {
     background: var(--card-bg);
-    border: 1px solid var(--border-color).
+    border: 1px solid var(--border-color);
 }
 
 [data-theme="dark"] .mission-card:hover,
 [data-theme="dark"] .team-card:hover,
 [data-theme="dark"] .timeline-content:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4).
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 [data-theme="dark"] .stats-section {
-    background: var(--primary-dark).
+    background: var(--primary-dark);
 }
 
 [data-theme="dark"] .team-role {
-    color: var(--text-light).
+    color: var(--text-light);
 }
 
 [data-theme="dark"] .timeline::before {
@@ -914,130 +914,130 @@ footer::before {
 
 [data-theme="dark"] .timeline-dot {
     background: var(--primary-light);
-    box-shadow: 0 0 0 5px rgba(118, 143, 255, 0.2).
+    box-shadow: 0 0 0 5px rgba(118, 143, 255, 0.2);
 }
 
 [data-theme="dark"] .footer-section h3::after {
-    background: linear-gradient(to right, var(--primary-light), var(--secondary-color)).
+    background: linear-gradient(to right, var(--primary-light), var(--secondary-color));
 }
 
 [data-theme="dark"] .social-links a {
     background: rgba(118, 143, 255, 0.1);
-    color: var(--primary-light).
+    color: var(--primary-light);
 }
 
 [data-theme="dark"] .social-links a:hover {
     background: var(--primary-light);
-    color: var(--text-color).
+    color: var(--text-color);
 }
 
 [data-theme="light"] .mission-section,
 [data-theme="light"] .mission-card {
     background: #fff;
-    color: #202124.
+    color: #202124;
 }
 [data-theme="light"] .mission-card h3 {
-    color: #1a73e8.
+    color: #1a73e8;
 }
 [data-theme="light"] .mission-card p {
     color: #202124 !important;
     opacity: 1 !important;
-    font-weight: 400.
+    font-weight: 400;
 }
 [data-theme="light"] .mission-section p {
     color: #202124 !important;
     opacity: 1 !important;
-    font-weight: 400.
+    font-weight: 400;
 }
 [data-theme="dark"] .mission-section,
 [data-theme="dark"] .mission-card {
     background: #23242a;
-    color: #e8eaed.
+    color: #e8eaed;
 }
 [data-theme="dark"] .mission-card h3 {
-    color: #8ab4f8.
+    color: #8ab4f8;
 }
 [data-theme="dark"] .mission-card p {
-    color: #ced4da.
+    color: #ced4da;
 }
 
 .team-name {
     font-size: 1.4rem;
     color: var(--primary-color);
     font-weight: 600;
-    margin-bottom: 0.5rem.
+    margin-bottom: 0.5rem;
 }
 
 .team-role {
     color: var(--text-light);
     font-size: 1.1rem;
-    margin-bottom: 1.5rem.
+    margin-bottom: 1.5rem;
 }
 
 .timeline-content h3 {
     color: var(--heading-color);
     font-size: 1.5rem;
-    margin-bottom: 1rem.
+    margin-bottom: 1rem;
 }
 
 .timeline-content p {
     color: #202124 !important;
     line-height: 1.8;
-    opacity: 1 !important.
+    opacity: 1 !important;
 }
 
 [data-theme="light"] .timeline-content {
     background: #fff;
     color: #202124 !important;
-    border: 1px solid #e8eaed.
+    border: 1px solid #e8eaed;
 }
 [data-theme="light"] .timeline-content h3, [data-theme="light"] .timeline-date {
-    color: #1a73e8 !important.
+    color: #1a73e8 !important;
 }
 [data-theme="light"] .timeline-content p,
 [data-theme="light"] .timeline-content,
 [data-theme="light"] .timeline-content * {
     color: #202124 !important;
-    opacity: 1 !important.
+    opacity: 1 !important;
 }
 [data-theme="dark"] .timeline-content {
     background: #23242a;
     color: #e8eaed;
-    border: 1px solid #3c4043.
+    border: 1px solid #3c4043;
 }
 [data-theme="dark"] .timeline-content h3, [data-theme="dark"] .timeline-date {
-    color: #8ab4f8 !important.
+    color: #8ab4f8 !important;
 }
 [data-theme="dark"] .timeline-content p {
-    color: #ced4da.
+    color: #ced4da;
 }
 
 [data-theme="light"] .history-section p,
 [data-theme="light"] .team-section p,
 [data-theme="light"] .mission-section p {
     color: #202124 !important;
-    opacity: 1 !important.
+    opacity: 1 !important;
 }
 [data-theme="dark"] .history-section p,
 [data-theme="dark"] .team-section p,
 [data-theme="dark"] .mission-section p {
     color: #e8eaed !important;
-    opacity: 1 !important.
+    opacity: 1 !important;
 }
 
 .footer-section p {
     color: var(--footer-text);
-    line-height: 1.8.
+    line-height: 1.8;
 }
 
 .footer-section a {
     color: var(--footer-text);
     text-decoration: none;
-    transition: color var(--transition-speed).
+    transition: color var(--transition-speed);
 }
 
 .footer-section a:hover {
-    color: var(--primary-color).
+    color: var(--primary-color);
 }
 
 /* Course card styles */
@@ -1047,22 +1047,22 @@ footer::before {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: all var(--transition-speed);
-    border: 1px solid var(--border-color).
+    border: 1px solid var(--border-color);
 }
 
 .course-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--hover-shadow).
+    box-shadow: var(--hover-shadow);
 }
 
 .course-image {
     width: 100%;
     height: 200px;
-    object-fit: cover.
+    object-fit: cover;
 }
 
 .course-info {
-    padding: 1.5rem.
+    padding: 1.5rem;
 }
 
 .course-title {
@@ -1070,7 +1070,7 @@ footer::before {
     font-weight: 600;
     color: var(--heading-color);
     margin-bottom: 0.8rem;
-    line-height: 1.4.
+    line-height: 1.4;
 }
 
 .course-description {
@@ -1078,7 +1078,7 @@ footer::before {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1rem;
-    opacity: 0.9.
+    opacity: 0.9;
 }
 
 .course-meta {
@@ -1087,7 +1087,7 @@ footer::before {
     align-items: center;
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--border-color).
+    border-top: 1px solid var(--border-color);
 }
 
 .course-duration {
@@ -1095,63 +1095,63 @@ footer::before {
     font-weight: 500;
     display: flex;
     align-items: center;
-    gap: 0.5rem.
+    gap: 0.5rem;
 }
 
 .course-level {
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 500.
+    font-weight: 500;
 }
 
 .course-level.beginner {
     background: rgba(52, 168, 83, 0.1);
-    color: #34a853.
+    color: #34a853;
 }
 
 .course-level.intermediate {
     background: rgba(66, 133, 244, 0.1);
-    color: #4285f4.
+    color: #4285f4;
 }
 
 .course-level.advanced {
     background: rgba(234, 67, 53, 0.1);
-    color: #ea4335.
+    color: #ea4335;
 }
 
 /* Dark mode specific course styles */
 [data-theme="dark"] .course-card {
     background: var(--card-bg);
-    border-color: var(--border-color).
+    border-color: var(--border-color);
 }
 
 [data-theme="dark"] .course-title {
-    color: var(--primary-light).
+    color: var(--primary-light);
 }
 
 [data-theme="dark"] .course-description {
     color: var(--text-color);
-    opacity: 0.9.
+    opacity: 0.9;
 }
 
 [data-theme="dark"] .course-duration {
-    color: var(--primary-light).
+    color: var(--primary-light);
 }
 
 [data-theme="dark"] .course-level.beginner {
     background: rgba(52, 168, 83, 0.2);
-    color: #81c995.
+    color: #81c995;
 }
 
 [data-theme="dark"] .course-level.intermediate {
     background: rgba(66, 133, 244, 0.2);
-    color: #8ab4f8.
+    color: #8ab4f8;
 }
 
 [data-theme="dark"] .course-level.advanced {
     background: rgba(234, 67, 53, 0.2);
-    color: #f28b82.
+    color: #f28b82;
 }
 
 /* Course grid styles */
@@ -1159,12 +1159,12 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem.
+    padding: 2rem;
 }
 
 .course-section {
     padding: 4rem 0;
-    background: var(--bg-color).
+    background: var(--bg-color);
 }
 
 .course-section h2 {
@@ -1172,7 +1172,7 @@ footer::before {
     margin-bottom: 2rem;
     color: var(--heading-color);
     font-size: 2.5rem;
-    font-weight: 700.
+    font-weight: 700;
 }
 
 .course-section p {
@@ -1181,13 +1181,13 @@ footer::before {
     margin: 0 auto 3rem;
     color: var(--text-color);
     font-size: 1.1rem;
-    line-height: 1.6.
+    line-height: 1.6;
 }
 
 /* Mission section styles */
 .mission-section {
     padding: 6rem 5%;
-    background: var(--bg-color).
+    background: var(--bg-color);
 }
 
 .mission-grid {
@@ -1196,7 +1196,7 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem.
+    margin-top: 3rem;
 }
 
 .mission-card {
@@ -1206,12 +1206,12 @@ footer::before {
     text-align: center;
     box-shadow: var(--card-shadow);
     transition: all var(--transition-speed);
-    border: 1px solid var(--border-color).
+    border: 1px solid var(--border-color);
 }
 
 .mission-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--hover-shadow).
+    box-shadow: var(--hover-shadow);
 }
 
 .mission-card i {
@@ -1226,24 +1226,24 @@ footer::before {
     justify-content: center;
     border-radius: 50%;
     margin: 0 auto 1.5rem;
-    transition: all var(--transition-speed).
+    transition: all var(--transition-speed);
 }
 
 .mission-card:hover i {
     transform: scale(1.1);
-    background: rgba(74, 144, 226, 0.2).
+    background: rgba(74, 144, 226, 0.2);
 }
 
 .mission-card h3 {
     color: var(--heading-color);
     font-size: 1.5rem;
-    margin-bottom: 1rem.
+    margin-bottom: 1rem;
 }
 
 .mission-card p {
     color: #202124 !important;
     line-height: 1.6;
-    opacity: 1 !important.
+    opacity: 1 !important;
 }
 
 /* Stats section styles */
@@ -1252,7 +1252,7 @@ footer::before {
     background: linear-gradient(135deg, #1a73e8 0%, #4a90e2 100%);
     color: #fff;
     position: relative;
-    overflow: hidden.
+    overflow: hidden;
 }
 
 .stats-grid {
@@ -1262,7 +1262,7 @@ footer::before {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     position: relative;
-    z-index: 1.
+    z-index: 1;
 }
 
 .stat-card {
@@ -1273,7 +1273,7 @@ footer::before {
     box-shadow: none;
     border: none;
     color: #fff;
-    transition: background 0.3s.
+    transition: background 0.3s;
 }
 
 .stat-number {
@@ -1281,36 +1281,36 @@ footer::before {
     font-weight: 700;
     color: #fff;
     margin-bottom: 0.5rem;
-    text-shadow: none.
+    text-shadow: none;
 }
 
 .stat-card p {
     color: #fff;
     font-size: 1.1rem;
     opacity: 0.95;
-    margin-bottom: 0.
+    margin-bottom: 0;
 }
 
 @media (max-width: 992px) {
     .stats-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 1.5rem.
+        gap: 1.5rem;
     }
 }
 @media (max-width: 600px) {
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 1rem.
+        gap: 1rem;
     }
     .stat-card {
-        padding: 2rem 1rem 1.5rem 1rem.
+        padding: 2rem 1rem 1.5rem 1rem;
     }
 }
 
 /* Team section styles */
 .team-section {
     padding: 6rem 5%;
-    background: var(--bg-color).
+    background: var(--bg-color);
 }
 
 .team-grid {
@@ -1319,7 +1319,7 @@ footer::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 3rem.
+    margin-top: 3rem;
 }
 
 .team-card {
@@ -1328,41 +1328,41 @@ footer::before {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: all var(--transition-speed);
-    border: 1px solid var(--border-color).
+    border: 1px solid var(--border-color);
 }
 
 .team-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--hover-shadow).
+    box-shadow: var(--hover-shadow);
 }
 
 .team-image {
     width: 100%;
     height: 250px;
-    object-fit: cover.
+    object-fit: cover;
 }
 
 .team-info {
     padding: 2rem;
-    text-align: center.
+    text-align: center;
 }
 
 .team-name {
     font-size: 1.4rem;
     color: var(--heading-color);
     margin-bottom: 0.5rem;
-    font-weight: 600.
+    font-weight: 600;
 }
 
 .team-role {
     color: #202124 !important;
-    margin-bottom: 1.5rem.
+    margin-bottom: 1.5rem;
 }
 
 .team-social {
     display: flex;
     justify-content: center;
-    gap: 1rem.
+    gap: 1rem;
 }
 
 .team-social a {
@@ -1375,25 +1375,25 @@ footer::before {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: all var(--transition-speed).
+    transition: all var(--transition-speed);
 }
 
 .team-social a:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-5px).
+    transform: translateY(-5px);
 }
 
 /* Timeline styles */
 .history-section {
     padding: 6rem 5%;
-    background: var(--bg-color).
+    background: var(--bg-color);
 }
 
 .timeline {
     max-width: 800px;
     margin: 3rem auto 0;
-    position: relative.
+    position: relative;
 }
 
 .timeline::before {
@@ -1403,7 +1403,7 @@ footer::before {
     transform: translateX(-50%);
     width: 3px;
     height: 100%;
-    background: var(--primary-color).
+    background: var(--primary-color);
 }
 
 .timeline-item {
@@ -1412,14 +1412,14 @@ footer::before {
     padding-right: 30px;
     margin-bottom: 2rem;
     width: 50%;
-    position: relative.
+    position: relative;
 }
 
 .timeline-item:nth-child(even) {
     align-self: flex-end;
     justify-content: flex-start;
     padding-right: 0;
-    padding-left: 30px.
+    padding-left: 30px;
 }
 
 .timeline-content {
@@ -1429,19 +1429,19 @@ footer::before {
     box-shadow: var(--card-shadow);
     width: 100%;
     border: 1px solid var(--border-color);
-    transition: all var(--transition-speed).
+    transition: all var(--transition-speed);
 }
 
 .timeline-content:hover {
     transform: translateX(10px);
-    box-shadow: var(--hover-shadow).
+    box-shadow: var(--hover-shadow);
 }
 
 .timeline-date {
     color: var(--primary-color);
     font-weight: bold;
     font-size: 1.2rem;
-    margin-bottom: 0.8rem.
+    margin-bottom: 0.8rem;
 }
 
 .timeline-dot {
@@ -1452,59 +1452,59 @@ footer::before {
     position: absolute;
     right: -12px;
     top: 20px;
-    box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.2).
+    box-shadow: 0 0 0 5px rgba(74, 144, 226, 0.2);
 }
 
 .timeline-item:nth-child(even) .timeline-dot {
     right: auto;
-    left: -12px.
+    left: -12px;
 }
 
 /* Dark mode specific styles */
 [data-theme="dark"] .mission-card {
     background: var(--card-bg);
-    border-color: var(--border-color).
+    border-color: var(--border-color);
 }
 
 [data-theme="dark"] .mission-card i {
     color: var(--primary-light);
-    background: rgba(122, 183, 255, 0.1).
+    background: rgba(122, 183, 255, 0.1);
 }
 
 [data-theme="dark"] .mission-card:hover i {
-    background: rgba(122, 183, 255, 0.2).
+    background: rgba(122, 183, 255, 0.2);
 }
 
 [data-theme="dark"] .stats-section {
-    background: var(--gradient-primary).
+    background: var(--gradient-primary);
 }
 
 [data-theme="dark"] .stat-card {
     background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1).
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .stat-card:hover {
-    background: rgba(255, 255, 255, 0.1).
+    background: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="dark"] .team-card {
     background: var(--card-bg);
-    border-color: var(--border-color).
+    border-color: var(--border-color);
 }
 
 [data-theme="dark"] .team-name {
-    color: var(--primary-light).
+    color: var(--primary-light);
 }
 
 [data-theme="dark"] .team-social a {
     background: rgba(122, 183, 255, 0.1);
-    color: var(--primary-light).
+    color: var(--primary-light);
 }
 
 [data-theme="dark"] .team-social a:hover {
     background: var(--primary-light);
-    color: var(--text-color).
+    color: var(--text-color);
 }
 
 [data-theme="dark"] .timeline::before {
@@ -1513,31 +1513,31 @@ footer::before {
 
 [data-theme="dark"] .timeline-dot {
     background: var(--primary-light);
-    box-shadow: 0 0 0 5px rgba(122, 183, 255, 0.2).
+    box-shadow: 0 0 0 5px rgba(122, 183, 255, 0.2);
 }
 
 [data-theme="dark"] .timeline-content {
     background: #23242a;
     color: #e8eaed;
-    border: 1px solid #3c4043.
+    border: 1px solid #3c4043;
 }
 
 [data-theme="dark"] .timeline-content h3, [data-theme="dark"] .timeline-date {
-    color: #8ab4f8 !important.
+    color: #8ab4f8 !important;
 }
 
 [data-theme="dark"] .timeline-content p {
-    color: #ced4da.
+    color: #ced4da;
 }
 
 /* User Profile Styles */
 .auth-section {
-    position: relative.
+    position: relative;
 }
 
 .user-profile {
     position: relative;
-    display: inline-block.
+    display: inline-block;
 }
 
 .user-avatar {
@@ -1546,13 +1546,13 @@ footer::before {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--primary-color);
-    cursor: pointer.
+    cursor: pointer;
 }
 
 .user-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover.
+    object-fit: cover;
 }
 
 .profile-dropdown {
@@ -1568,7 +1568,7 @@ footer::before {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1001.
+    z-index: 1001;
 }
 
 /* Hiển thị dropdown khi hover vào user-profile */
@@ -1576,13 +1576,13 @@ footer::before {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    pointer-events: auto.
+    pointer-events: auto;
 }
 
 .dropdown-header {
     padding: 20px;
     border-bottom: 1px solid var(--border-color);
-    text-align: center.
+    text-align: center;
 }
 
 #headerUserName {
@@ -1590,13 +1590,13 @@ footer::before {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-color);
-    margin-bottom: 5px.
+    margin-bottom: 5px;
 }
 
 #headerUserEmail {
     display: block;
     font-size: 0.9rem;
-    color: var(--text-light).
+    color: var(--text-light);
 }
 
 .dropdown-item {
@@ -1605,38 +1605,38 @@ footer::before {
     padding: 12px 20px;
     color: var(--text-color);
     text-decoration: none;
-    transition: all 0.3s ease.
+    transition: all 0.3s ease;
 }
 
 .dropdown-item i {
     margin-right: 12px;
     font-size: 1.1rem;
-    color: var(--text-light).
+    color: var(--text-light);
 }
 
 .dropdown-item:hover {
     background: var(--light-gray);
-    color: var(--primary-color).
+    color: var(--primary-color);
 }
 
 .dropdown-item:hover i {
-    color: var(--primary-color).
+    color: var(--primary-color);
 }
 
 .dropdown-item.logout {
-    color: #dc3545.
+    color: #dc3545;
 }
 
 .dropdown-item.logout:hover {
-    background: rgba(220, 53, 69, 0.1).
+    background: rgba(220, 53, 69, 0.1);
 }
 
 .dropdown-item.logout:hover i {
-    color: #dc3545.
+    color: #dc3545;
 }
 
 hr {
     margin: 10px 0;
     border: none;
-    border-top: 1px solid var(--border-color).
+    border-top: 1px solid var(--border-color);
 }
