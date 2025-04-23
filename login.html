@@ -243,5 +243,91 @@
                     </div>
                     <button type="submit" class="submit-btn">Đăng Nhập</button>
                 </form>
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
+                </div>
 
-                <div class
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="register.html">Đăng Ký</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+    <script>
+        // Password visibility toggle
+        function setupPasswordToggle(passwordInput, toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                toggleButton.classList.toggle('fa-eye');
+                toggleButton.classList.toggle('fa-eye-slash');
+            });
+        }
+
+        setupPasswordToggle(document.getElementById('password'), document.getElementById('passwordToggle'));
+
+        // Form validation and submission
+        const loginForm = document.getElementById('loginForm');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const emailValue = email.value.trim();
+            const passwordValue = password.value;
+
+            // Basic validation
+            if (!emailValue || !passwordValue) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Email validation
+            if (!emailValue.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Check if user exists
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === emailValue && u.password === passwordValue);
+
+            if (user) {
+                // Store current user in localStorage
+                localStorage.setItem('currentUser', JSON.stringify(user));
+
+                // Show success message
+                alert('Login successful! Redirecting...');
+
+                // Redirect to index.html after a short delay
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+
+        // Social login buttons
+        document.querySelectorAll('.social-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Social login will be implemented soon!');
+            });
+        });
+    </script>
+</body>
+</html>
