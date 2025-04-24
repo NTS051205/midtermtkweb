@@ -396,3 +396,27 @@ function initTheme() {
         localStorage.setItem('theme', newTheme);
     });
 }
+
+// Function to update cart count
+function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartCount = cartItems.length;
+    
+    // Update all cart count elements
+    const cartCountElements = document.querySelectorAll('.cart-count');
+    cartCountElements.forEach(element => {
+        element.textContent = cartCount;
+    });
+}
+
+// Update cart count when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
+// Update cart count when storage changes
+window.addEventListener('storage', function(e) {
+    if (e.key === 'cartItems') {
+        updateCartCount();
+    }
+});
