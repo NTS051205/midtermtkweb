@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuyển Dụng - NEU Course Management System</title>
+    <title>Tuyển Dụng - Hệ Thống Quản Lý Khóa Học NEU</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232196f3'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='40'%3EN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -267,7 +267,7 @@
                     <circle cx="50" cy="50" r="45" fill="#2196f3"/>
                     <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
                 </svg>
-                <span>NEU Course Management System</span>
+                <span>Hệ Thống Quản Lý Khóa Học NEU</span>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -276,11 +276,10 @@
                 <li><a href="index.html">Trang Chủ</a></li>
                 <li><a href="about.html">Giới Thiệu</a></li>
                 <li><a href="courses.html">Khóa Học</a></li>
-                <li><a href="news.html" >Tin Tức</a></li>
+                <li><a href="news.html">Tin Tức</a></li>
                 <li><a href="contact.html">Liên Hệ</a></li>
                 <li><a href="faq.html">Hỏi Đáp</a></li>
                 <li><a href="careers.html" class="active">Tuyển Dụng</a></li>
-                <!-- Login/Profile section -->
                 <li class="auth-section">
                     <a href="login.html" class="login-btn" id="loginButton">Đăng Nhập</a>
                     <li>
@@ -289,30 +288,29 @@
                             <span class="cart-count">0</span>
                         </a>
                     </li>
-                    <!-- User Profile Dropdown (hidden by default) -->
                     <div class="user-profile" id="userProfile" style="display: none;">
                         <div class="user-avatar">
-                            <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="userAvatar">
+                            <img src="assets/img/avatar/avatar-1.png" alt="Ảnh đại diện người dùng" id="userAvatar">
                             <div class="profile-dropdown">
                                 <div class="dropdown-header">
                                     <span id="userName">John Smith</span>
                                     <span id="userEmail">@johnsmith</span>
                                 </div>
                                 <a href="profile.html" class="dropdown-item">
-                                    <i class="fas fa-user"></i> Profile
+                                    <i class="fas fa-user"></i> Hồ sơ
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-heart"></i> Favourite list
+                                    <i class="fas fa-heart"></i> Danh sách yêu thích
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-moon"></i> Dark mode
+                                    <i class="fas fa-moon"></i> Chế độ tối
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-cog"></i> Settings
+                                    <i class="fas fa-cog"></i> Cài đặt
                                 </a>
                                 <hr>
                                 <a href="#" class="dropdown-item logout" id="logoutButton">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
                                 </a>
                             </div>
                         </div>
@@ -330,33 +328,33 @@
 
     <section class="careers-hero">
         <div class="hero-content">
-            <h1 style="color: white; font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Join Our Team</h1>
-            <p style="color: white; font-size: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Build your career with NEU Learning</p>
+            <h1 style="color: white; font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Tham Gia Đội Ngũ Chúng Tôi</h1>
+            <p style="color: white; font-size: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Xây dựng sự nghiệp của bạn với NEU Learning</p>
         </div>
     </section>
 
     <section class="careers-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Open Positions</h2>
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;">Vị Trí Tuyển Dụng</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
-                Explore exciting career opportunities at NEU Learning and be part of our mission to transform education.
+                Khám phá cơ hội nghề nghiệp thú vị tại NEU Learning và trở thành một phần trong sứ mệnh thay đổi giáo dục của chúng tôi.
             </p>
             
             <div class="jobs-filters">
-                <button class="filter-btn active" data-department="all">All Departments</button>
-                <button class="filter-btn" data-department="engineering">Engineering</button>
-                <button class="filter-btn" data-department="education">Education</button>
-                <button class="filter-btn" data-department="marketing">Marketing</button>
+                <button class="filter-btn active" data-department="all">Tất cả phòng ban</button>
+                <button class="filter-btn" data-department="engineering">Kỹ thuật</button>
+                <button class="filter-btn" data-department="education">Giáo dục</button>
+                <button class="filter-btn" data-department="marketing">Tiếp thị</button>
             </div>
 
             <div class="careers-grid">
                 <div class="job-card" data-department="engineering">
                     <div class="job-info">
-                        <h3>Senior Full Stack Developer</h3>
+                        <h3>Lập Trình Viên Full Stack Cao Cấp</h3>
                         <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-                            <span><i class="fas fa-clock"></i> Full-time</span>
-                            <span><i class="fas fa-building"></i> Engineering</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Làm việc từ xa</span>
+                            <span><i class="fas fa-clock"></i> Toàn thời gian</span>
+                            <span><i class="fas fa-building"></i> Kỹ thuật</span>
                         </div>
                         <div class="job-tags">
                             <span class="job-tag">React</span>
@@ -364,41 +362,41 @@
                             <span class="job-tag">PostgreSQL</span>
                         </div>
                     </div>
-                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                    <a href="#application-form" class="apply-btn">Ứng tuyển ngay</a>
                 </div>
 
                 <div class="job-card" data-department="education">
                     <div class="job-info">
-                        <h3>Course Content Developer</h3>
+                        <h3>Phát Triển Nội Dung Khóa Học</h3>
                         <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> Hybrid</span>
-                            <span><i class="fas fa-clock"></i> Full-time</span>
-                            <span><i class="fas fa-building"></i> Education</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Kết hợp</span>
+                            <span><i class="fas fa-clock"></i> Toàn thời gian</span>
+                            <span><i class="fas fa-building"></i> Giáo dục</span>
                         </div>
                         <div class="job-tags">
-                            <span class="job-tag">Curriculum Design</span>
+                            <span class="job-tag">Thiết kế chương trình</span>
                             <span class="job-tag">E-learning</span>
-                            <span class="job-tag">Teaching</span>
+                            <span class="job-tag">Giảng dạy</span>
                         </div>
                     </div>
-                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                    <a href="#application-form" class="apply-btn">Ứng tuyển ngay</a>
                 </div>
 
                 <div class="job-card" data-department="marketing">
                     <div class="job-info">
-                        <h3>Digital Marketing Manager</h3>
+                        <h3>Quản Lý Tiếp Thị Số</h3>
                         <div class="job-meta">
-                            <span><i class="fas fa-map-marker-alt"></i> On-site</span>
-                            <span><i class="fas fa-clock"></i> Full-time</span>
-                            <span><i class="fas fa-building"></i> Marketing</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tại văn phòng</span>
+                            <span><i class="fas fa-clock"></i> Toàn thời gian</span>
+                            <span><i class="fas fa-building"></i> Tiếp thị</span>
                         </div>
                         <div class="job-tags">
                             <span class="job-tag">SEO</span>
-                            <span class="job-tag">Social Media</span>
-                            <span class="job-tag">Analytics</span>
+                            <span class="job-tag">Mạng xã hội</span>
+                            <span class="job-tag">Phân tích</span>
                         </div>
                     </div>
-                    <a href="#application-form" class="apply-btn">Apply Now</a>
+                    <a href="#application-form" class="apply-btn">Ứng tuyển ngay</a>
                 </div>
             </div>
         </div>
@@ -406,49 +404,49 @@
 
     <section class="application-section" id="application-form">
         <div class="container">
-            <h2 style="text-align: center;">Apply Now</h2>
+            <h2 style="text-align: center;">Ứng Tuyển Ngay</h2>
             <p style="text-align: center; max-width: 800px; margin: 1rem auto;">
-                Take the first step towards joining our team. Fill out the application form below.
+                Thực hiện bước đầu tiên để tham gia đội ngũ của chúng tôi. Điền vào mẫu đơn ứng tuyển bên dưới.
             </p>
             <form class="application-form">
                 <div class="form-group">
-                    <label for="position">Position*</label>
+                    <label for="position">Vị trí*</label>
                     <select class="form-control" id="position" required>
-                        <option value="">Select a position</option>
-                        <option value="developer">Senior Full Stack Developer</option>
-                        <option value="content">Course Content Developer</option>
-                        <option value="marketing">Digital Marketing Manager</option>
+                        <option value="">Chọn vị trí</option>
+                        <option value="developer">Lập Trình Viên Full Stack Cao Cấp</option>
+                        <option value="content">Phát Triển Nội Dung Khóa Học</option>
+                        <option value="marketing">Quản Lý Tiếp Thị Số</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="name">Full Name*</label>
+                    <label for="name">Họ và tên*</label>
                     <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address*</label>
+                    <label for="email">Địa chỉ email*</label>
                     <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Phone Number</label>
+                    <label for="phone">Số điện thoại</label>
                     <input type="tel" class="form-control" id="phone">
                 </div>
                 <div class="form-group">
-                    <label for="resume">Resume/CV*</label>
+                    <label for="resume">Sơ yếu lý lịch/CV*</label>
                     <input type="file" id="resume" class="file-upload" accept=".pdf,.doc,.docx" required>
                     <label for="resume" class="file-upload-label">
-                        <i class="fas fa-cloud-upload-alt"></i> Choose File
+                        <i class="fas fa-cloud-upload-alt"></i> Chọn tệp
                     </label>
                     <span class="file-name"></span>
                 </div>
                 <div class="form-group">
-                    <label for="cover-letter">Cover Letter</label>
+                    <label for="cover-letter">Thư xin việc</label>
                     <textarea class="form-control" id="cover-letter" rows="5"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="portfolio">Portfolio URL</label>
+                    <label for="portfolio">URL Portfolio</label>
                     <input type="url" class="form-control" id="portfolio">
                 </div>
-                <button type="submit" class="apply-btn" style="border: none; cursor: pointer;">Submit Application</button>
+                <button type="submit" class="apply-btn" style="border: none; cursor: pointer;">Gửi đơn ứng tuyển</button>
             </form>
         </div>
     </section>
@@ -456,19 +454,19 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Contact Us</h3>
+                <h3>Liên hệ</h3>
                 <p>Email: careers@neulearning.edu</p>
-                <p>Phone: (123) 456-7890</p>
+                <p>Điện thoại: (123) 456-7890</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Liên kết nhanh</h3>
                 <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Chính sách bảo mật</a></li>
+                    <li><a href="terms.html">Điều khoản dịch vụ</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Follow Us</h3>
+                <h3>Theo dõi chúng tôi</h3>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -477,7 +475,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+            <p>&copy; 2025 NEU Learning. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
 
@@ -524,7 +522,7 @@
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 // Here you would typically handle the form submission with AJAX
-                alert('Thank you for your application! We will review it and get back to you soon.');
+                alert('Cảm ơn đơn ứng tuyển của bạn! Chúng tôi sẽ xem xét và liên hệ lại sớm.');
                 form.reset();
                 fileName.textContent = '';
             });
