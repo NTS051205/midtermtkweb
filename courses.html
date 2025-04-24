@@ -161,6 +161,12 @@
                 <!-- Login/Profile section -->
                 <li class="auth-section">
                     <a href="login.html" class="login-btn" id="loginButton">Đăng Nhập</a>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    </li>
                     <!-- User Profile Dropdown (hidden by default) -->
                     <div class="user-profile" id="userProfile" style="display: none;">
                         <div class="user-avatar">
@@ -254,51 +260,8 @@
     </footer>
 
     <script src="style.js"></script>
+    <script src="courses-data.js"></script>
     <script>
-        // Course data
-        const courses = [
-            {
-                id: 1,
-                title: 'Web Development Fundamentals',
-                description: 'Learn HTML, CSS, and JavaScript from scratch',
-                image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-                price: '$99',
-                duration: '12 weeks',
-                category: 'development',
-                tags: ['HTML', 'CSS', 'JavaScript']
-            },
-            {
-                id: 2,
-                title: 'UI/UX Design Essentials',
-                description: 'Master the principles of user interface design',
-                image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5',
-                price: '$129',
-                duration: '8 weeks',
-                category: 'design',
-                tags: ['UI', 'UX', 'Design']
-            },
-            {
-                id: 3,
-                title: 'Digital Marketing Strategy',
-                description: 'Learn to create effective digital marketing campaigns',
-                image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a',
-                price: '$149',
-                duration: '10 weeks',
-                category: 'marketing',
-                tags: ['Marketing', 'Social Media']
-            },
-            {
-                id: 4,
-                title: 'Business Analytics',
-                description: 'Master data analysis for business decisions',
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
-                price: '$199',
-                duration: '14 weeks',
-                category: 'business',
-                tags: ['Analytics', 'Business']
-            }
-        ];
-
         // Function to create course cards
         function createCourseCard(course) {
             return `
