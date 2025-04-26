@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu - NEU Course Management System</title>
+    <title>Giới Thiệu - Hệ Thống Quản Lý Khóa Học NEU</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232196f3'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='40'%3EN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -329,7 +329,7 @@
                     <circle cx="50" cy="50" r="45" fill="#2196f3"/>
                     <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
                 </svg>
-                <span>NEU Course Management System</span>
+                <span>Hệ Thống Quản Lý Khóa Học NEU</span>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -338,11 +338,10 @@
                 <li><a href="index.html">Trang Chủ</a></li>
                 <li><a href="about.html" class="active">Giới Thiệu</a></li>
                 <li><a href="courses.html">Khóa Học</a></li>
-                <li><a href="news.html" >Tin Tức</a></li>
+                <li><a href="news.html">Tin Tức</a></li>
                 <li><a href="contact.html">Liên Hệ</a></li>
                 <li><a href="faq.html">Hỏi Đáp</a></li>
                 <li><a href="careers.html">Tuyển Dụng</a></li>
-                <!-- Login/Profile section -->
                 <li class="auth-section">
                     <a href="login.html" class="login-btn" id="loginButton">Đăng Nhập</a>
                     <li>
@@ -351,30 +350,29 @@
                             <span class="cart-count">0</span>
                         </a>
                     </li>
-                    <!-- User Profile Dropdown (hidden by default) -->
                     <div class="user-profile" id="userProfile" style="display: none;">
                         <div class="user-avatar">
-                            <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="userAvatar">
+                            <img src="assets/img/avatar/avatar-1.png" alt="Ảnh đại diện người dùng" id="userAvatar">
                             <div class="profile-dropdown">
                                 <div class="dropdown-header">
                                     <span id="userName">John Smith</span>
                                     <span id="userEmail">@johnsmith</span>
                                 </div>
                                 <a href="profile.html" class="dropdown-item">
-                                    <i class="fas fa-user"></i> Profile
+                                    <i class="fas fa-user"></i> Hồ sơ
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-heart"></i> Favourite list
+                                    <i class="fas fa-heart"></i> Danh sách yêu thích
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-moon"></i> Dark mode
+                                    <i class="fas fa-moon"></i> Chế độ tối
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-cog"></i> Settings
+                                    <i class="fas fa-cog"></i> Cài đặt
                                 </a>
                                 <hr>
                                 <a href="#" class="dropdown-item logout" id="logoutButton">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
                                 </a>
                             </div>
                         </div>
@@ -402,7 +400,8 @@
 
     <section class="mission-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700; font-family: 'Courier New', Courier, monospace;">Sứ mệnh và Giá trị của Chúng Tôi</h2>            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700; font-family: 'Courier New', Courier, monospace;">Sứ mệnh và Giá trị của Chúng Tôi</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
                 Chúng tôi cam kết mang đến nền giáo dục chất lượng cho mọi người, ở mọi nơi. 
                 Sứ mệnh của chúng tôi là thay đổi cuộc sống thông qua việc học tập.
             </p>
@@ -455,7 +454,6 @@
                     <img src="./assets/img/avatar/thuy.jpg" alt="Nguyễn Thị Thùy" class="team-image">
                     <div class="team-info">
                         <h3 class="team-name">Nguyễn Thị Thùy</h3>
-                        <!-- <p class="team-role">Chief Executive Officer</p> -->
                         <div class="team-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -467,7 +465,6 @@
                     <img src="./assets/img/avatar/Son.jpg" alt="Nguyễn Tiến Sơn" class="team-image">
                     <div class="team-info">
                         <h3 class="team-name">Nguyễn Tiến Sơn</h3>
-                        <!-- <p class="team-role">Chief Technology Officer</p> -->
                         <div class="team-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -479,7 +476,6 @@
                     <img src="./assets/img/avatar/ducminh.jpg" alt="Trần Đức Minh" class="team-image">
                     <div class="team-info">
                         <h3 class="team-name">Trần Đức Minh</h3>
-                        <!-- <p class="team-role">Head of Education</p> -->
                         <div class="team-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -491,7 +487,6 @@
                     <img src="./assets/img/avatar/leminh.jpg" alt="Lê Quang Minh" class="team-image">
                     <div class="team-info">
                         <h3 class="team-name">Lê Quang Minh</h3>
-                        <!-- <p class="team-role">Chief Marketing Officer</p> -->
                         <div class="team-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -505,7 +500,7 @@
 
     <section class="history-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;font-family: 'Courier New', Courier, monospace;">Hành trình của chúng tôi</h2>            
+            <h2 style="text-align: center; margin-bottom: 1rem; color: var(--heading-color); font-size: 2.5rem; font-weight: 700;font-family: 'Courier New', Courier, monospace;">Hành trình của chúng tôi</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-color); font-size: 1.2rem; line-height: 1.6; opacity: 0.9;">
                 Từ những khởi đầu khiêm tốn đến vị thế hiện tại, hãy khám phá những cột mốc quan trọng đã định hình nên NEU Learning.
             </p>
@@ -513,40 +508,40 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2020</div>
-                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">The Beginning</h3>
-                        <p style="color: var(--text-color); line-height: 1.6;">NEU Learning was founded with a vision to make quality education accessible to everyone.</p>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Khởi đầu</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">NEU Learning được thành lập với tầm nhìn mang giáo dục chất lượng đến với mọi người.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2021</div>
-                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Rapid Growth</h3>
-                        <p style="color: var(--text-color); line-height: 1.6;">Reached our first 10,000 students and expanded our course offerings.</p>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Phát triển nhanh chóng</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Đạt được 10.000 sinh viên đầu tiên và mở rộng các khóa học.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2022</div>
-                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Global Expansion</h3>
-                        <p style="color: var(--text-color); line-height: 1.6;">Launched operations in multiple countries and introduced new learning technologies.</p>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Mở rộng toàn cầu</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Triển khai hoạt động tại nhiều quốc gia và giới thiệu công nghệ học tập mới.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2023</div>
-                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Innovation Award</h3>
-                        <p style="color: var(--text-color); line-height: 1.6;">Received recognition for our innovative approach to online education.</p>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Giải thưởng Đổi mới</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Nhận được sự công nhận cho cách tiếp cận đổi mới trong giáo dục trực tuyến.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date" style="color: var(--primary-color); font-weight: 600;">2024</div>
-                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">AI Integration</h3>
-                        <p style="color: var(--text-color); line-height: 1.6;">Implemented advanced AI-powered learning features to enhance student experience.</p>
+                        <h3 style="color: var(--heading-color); font-size: 1.4rem; font-weight: 600;">Tích hợp AI</h3>
+                        <p style="color: var(--text-color); line-height: 1.6;">Triển khai các tính năng học tập được hỗ trợ bởi AI tiên tiến để nâng cao trải nghiệm học tập.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
@@ -558,19 +553,19 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Liên hệ</h3>
-                <p>Địa chỉ: 207 Giải Phóng, phường Đồng Tâm, quận Hai Bà Trưng, Hà Nội, Việt Nam </p>
+                <p>Địa chỉ: 207 Giải Phóng, phường Đồng Tâm, quận Hai Bà Trưng, Hà Nội, Việt Nam</p>
                 <p>Email: contact@neulearning.edu</p>
-                <p>Phone: (123) 456-7890</p>
+                <p>Điện thoại: (123) 456-7890</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Liên kết nhanh</h3>
                 <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Chính sách bảo mật</a></li>
+                    <li><a href="terms.html">Điều khoản dịch vụ</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Follow Us</h3>
+                <h3>Theo dõi chúng tôi</h3>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -579,7 +574,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+            <p>&copy; 2025 NEU Learning. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
 
