@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Khóa Học - NEU Course Management System</title>
+    <title>Chi Tiết Khóa Học - Hệ thống Quản lý Khóa học NEU</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -220,7 +220,7 @@
                     <circle cx="50" cy="50" r="45" fill="#2196f3"/>
                     <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
                 </svg>
-                <span>NEU Course Management System</span>
+                <span>Hệ thống Quản lý Khóa học NEU</span>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -248,24 +248,24 @@
                             <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="userAvatar">
                             <div class="profile-dropdown">
                                 <div class="dropdown-header">
-                                    <span id="userName">John Smith</span>
-                                    <span id="userEmail">@johnsmith</span>
+                                    <span id="userName">Nguyen Van A</span>
+                                    <span id="userEmail">@nguyenvana</span>
                                 </div>
                                 <a href="profile.html" class="dropdown-item">
-                                    <i class="fas fa-user"></i> Profile
+                                    <i class="fas fa-user"></i> Hồ Sơ
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-heart"></i> Favourite list
+                                    <i class="fas fa-heart"></i> Danh sách yêu thích
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-moon"></i> Dark mode
+                                    <i class="fas fa-moon"></i> Chế độ tối
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-cog"></i> Settings
+                                    <i class="fas fa-cog"></i> Cài đặt
                                 </a>
                                 <hr>
                                 <a href="#" class="dropdown-item logout" id="logoutButton">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
                                 </a>
                             </div>
                         </div>
@@ -284,36 +284,40 @@
     <section class="course-header">
         <div class="course-header-content">
             <div class="course-info">
-                <h1 id="courseTitle">Course Title</h1>
-                <p id="courseDescription">Course description will be loaded here.</p>
+                <h1 id="courseTitle">Tiêu đề khóa học</h1>
+                <p id="courseDescription">Mô tả khóa học sẽ được tải về đây.</p>
                 <div class="course-meta">
-                    <span><i class="far fa-clock"></i> <span id="courseDuration">Duration</span></span>
-                    <span><i class="fas fa-user-graduate"></i> <span id="courseStudents">500+ Students</span></span>
-                    <span><i class="fas fa-star"></i> <span id="courseRating">4.8 (120 Reviews)</span></span>
+                    <span><i class="far fa-clock"></i> <span id="courseDuration">Thời gian</span></span>
+                    <span><i class="fas fa-user-graduate"></i> <span id="courseStudents">500+ Sinh viên</span></span>
+                    <span><i class="fas fa-star"></i> <span id="courseRating">4.8 (120 Đánh giá)</span></span>
+
                 </div>
                 <div class="course-tags" id="courseTags">
-                    <!-- Tags will be loaded here -->
+                    <!-- Các thẻ sẽ được tải về đây -->
                 </div>
             </div>
             <div class="enrollment-card">
-                <div class="price-tag" id="coursePrice">$99</div>
-                <button class="enroll-btn" id="enrollBtn">Enroll Now</button>
-                <div class="course-features">
-                    <div class="feature-item">
-                        <i class="fas fa-video"></i>
-                        <span>20+ Hours of Video</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Downloadable Resources</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Certificate of Completion</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-infinity"></i>
-                        <span>Lifetime Access</span>
+            <div class="price-tag" id="coursePrice">1.000.000</div>
+                <button class="enroll-btn" id="enrollBtn">Đăng ký ngay</button>
+            <div class="course-features">
+            <div class="feature-item">
+                <i class="fas fa-video"></i>
+                 <span>Hơn 20 giờ Video</span>
+            </div>
+    <div class="feature-item">
+        <i class="fas fa-file-alt"></i>
+        <span>Tài nguyên có thể tải về</span>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-certificate"></i>
+        <span>Chứng chỉ hoàn thành</span>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-infinity"></i>
+        <span>Truy cập suốt đời</span>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -325,35 +329,40 @@
             <div class="main-content">
                 <div class="course-tabs">
                     <div class="tab-buttons">
-                        <button class="tab-btn active" data-tab="curriculum">Curriculum</button>
-                        <button class="tab-btn" data-tab="instructor">Instructor</button>
-                        <button class="tab-btn" data-tab="reviews">Reviews</button>
-                    </div>
+                        <button class="tab-btn active" data-tab="curriculum">Chương trình học</button>
+                        <button class="tab-btn" data-tab="instructor">Giảng viên</button>
+                        <button class="tab-btn" data-tab="reviews">Đánh giá</button>
+        </div>
 
-                    <div class="tab-content active" id="curriculum">
-                        <div class="curriculum-item">
-                            <div class="curriculum-header">
-                                <h3>Module 1: Introduction</h3>
-                                <i class="fas fa-chevron-down"></i>
+        <div class="tab-content active" id="curriculum">
+              <div class="curriculum-item">
+                  <div class="curriculum-header">
+            <h3>Module 1: Giới thiệu</h3>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="curriculum-content">
+            <ul>
+                <li>Tổng quan khóa học</li>
+                <li>Cài đặt môi trường làm việc</li>
+                <li>Khái niệm cơ bản</li>
+                                </ul>
+                    </div>
+                        </div>
                             </div>
-                            <div class="curriculum-content">
-                                <ul>
-                                    <li>Course Overview</li>
-                                    <li>Setting Up Your Environment</li>
-                                    <li>Basic Concepts</li>
+
                                 </ul>
                             </div>
                         </div>
-                        <!-- More curriculum items -->
+                        <!-- Thêm các mục chương trình học -->
                     </div>
 
                     <div class="tab-content" id="instructor">
                         <div class="instructor-profile">
                             <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5" alt="Instructor" class="instructor-image">
                             <div>
-                                <h3>John Smith</h3>
-                                <p>Senior Developer & Instructor</p>
-                                <p>15+ years of experience in web development and teaching. Expert in modern web technologies and best practices.</p>
+                                <h3>Văn Khang </h3>
+        
+                                <p>Hơn 15 năm kinh nghiệm trong phát triển web và giảng dạy. Chuyên gia trong các công nghệ web hiện đại và các phương pháp tốt nhất.</p>
                             </div>
                         </div>
                     </div>
@@ -364,8 +373,8 @@
                                 <div class="review-author">
                                     <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Reviewer">
                                     <div>
-                                        <h4>Sarah Johnson</h4>
-                                        <p>2 months ago</p>
+                                        <h4>Minh Tuấn</h4>
+                                        <p>2 tháng trước</p>
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -376,14 +385,14 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                             </div>
-                            <p>Excellent course! The content is well-structured and the instructor explains complex concepts clearly.</p>
+                            <p>Khóa học tuyệt vời! Nội dung được tổ chức chặt chẽ và giảng viên giải thích các khái niệm phức tạp một cách rõ ràng.</p>
                         </div>
-                        <!-- More reviews -->
+                        <!-- Các đánh giá khác -->
                     </div>
                 </div>
             </div>
             <div class="sidebar">
-                <!-- Additional content or widgets can be added here -->
+                <!-- Nội dung hoặc tiện ích bổ sung có thể được thêm vào đây -->
             </div>
         </div>
     </section>
@@ -391,19 +400,19 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Contact Us</h3>
+                <h3>Liên hệ </h3>
                 <p>Email: contact@neulearning.edu</p>
-                <p>Phone: (123) 456-7890</p>
+                <p>Điện thoại: (123) 456-7890</p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3>Liên kết nhanh</h3>
                 <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Chính sách bảo mật</a></li>
+                    <li><a href="terms.html">Điều khoản dịch vụ</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Follow Us</h3>
+                <h3>Theo dõi chúng tôi</h3>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -412,7 +421,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 NEU Learning. All rights reserved.</p>
+            <p>&copy; 2025 NEU Learning. Mọi quyền được bảo lưu..</p>
         </div>
     </footer>
 
