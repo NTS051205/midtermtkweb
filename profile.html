@@ -415,7 +415,7 @@
                     </li>
                     <!-- User Profile Dropdown -->
                     <div class="user-profile" id="userProfile">
-                        <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="headerAvatar">
+                        <img src="./assets/img/avatar/avatar-1.png" alt="User Avatar" id="headerAvatar">
                         <div class="profile-dropdown">
                             <div class="dropdown-header">
                                 <h4 id="headerUserName">Nguyễn Sơn</h4>
@@ -459,42 +459,41 @@
         <div class="profile-sidebar">
             <div class="user-info-card">
                 <div class="user-avatar">
-                    <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="profileAvatar">
+                    <img id="userAvatar" src="" alt="User Avatar">
                 </div>
-                <h2 class="user-name">Nguyễn Sơn</h2>
-                <p class="user-registered">Đăng ký: Ngày 17 tháng 5 năm 2022</p>
+                <div class="user-name" id="userName"></div>
+                <div class="user-registered" id="userRegistered"></div>
             </div>
             <div class="sidebar-menu">
-                <a href="#manage-account" class="menu-item active">
+                <a href="#" class="menu-item active">
                     <i class='bx bx-user'></i>
                     <span>Thông tin cá nhân</span>
                 </a>
-                <a href="#addresses" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-map'></i>
                     <span>Địa chỉ</span>
                 </a>
-                <a href="#communications" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-bell'></i>
                     <span>Thông báo</span>
                 </a>
-                <a href="#my-courses" class="menu-item">
-                    <i class='bx bx-book-open'></i>
+                <a href="#" class="menu-item">
+                    <i class='bx bx-book'></i>
                     <span>Khóa học của tôi</span>
                 </a>
-                <a href="#my-certificates" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-certification'></i>
                     <span>Chứng chỉ</span>
                 </a>
-                <a href="#favorites" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-heart'></i>
                     <span>Yêu Thích</span>
                 </a>
-                <hr style="margin: 1rem 0; border: none; border-top: 1px solid #f0f0f0;">
-                <a href="#help" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-help-circle'></i>
-                    <span>Trung tập trợ giúp</span>
+                    <span>Trung tâm trợ giúp</span>
                 </a>
-                <a href="#settings" class="menu-item">
+                <a href="#" class="menu-item">
                     <i class='bx bx-cog'></i>
                     <span>Cài đặt</span>
                 </a>
@@ -509,45 +508,26 @@
                 <div class="cards-grid">
                     <div class="credit-card">
                         <div class="card-content">
-                            <div class="card-number">**** **** **** 3456</div>
+                            <div class="card-number" id="cardNumber1"></div>
                             <div class="card-info">
                                 <div class="card-holder">
                                     <span class="label">Chủ thẻ</span>
-                                    <span class="value">Nguyễn Sơn</span>
+                                    <span class="value" id="cardHolder1"></span>
                                 </div>
                                 <div class="card-expiry">
-                                    <span class="label">Hết hạn</span>
-                                    <span class="value">10/25</span>
+                                    <span class="label">Hiệu lực</span>
+                                    <span class="value" id="cardExpiry1"></span>
                                 </div>
                             </div>
                             <div class="card-type">
-                                <i class="fab fa-cc-visa fa-2x"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="credit-card">
-                        <div class="card-content">
-                            <div class="card-number">**** **** **** 7654</div>
-                            <div class="card-info">
-                                <div class="card-holder">
-                                    <span class="label">Chủ thẻ</span>
-                                    <span class="value">Nguyễn Sơn</span>
-                                </div>
-                                <div class="card-expiry">
-                                    <span class="label">Hết hạn</span>
-                                    <span class="value">03/26</span>
-                                </div>
-                            </div>
-                            <div class="card-type">
-                                <i class="fab fa-cc-visa fa-2x"></i>
+                                <img src="path/to/visa-logo.png" alt="VISA">
                             </div>
                         </div>
                     </div>
 
                     <div class="add-card">
                         <button class="add-card-btn">
-                            <i class="fas fa-plus"></i>
+                            <i class='bx bx-plus-circle'></i>
                             <span>Thêm thẻ mới</span>
                         </button>
                     </div>
@@ -559,32 +539,32 @@
                 <h2 class="section-title">Thông tin tài khoản</h2>
                 <div class="info-grid">
                     <div class="info-item">
-                        <div class="info-item-label">
                             <i class='bx bx-envelope'></i>
-                            Địa chỉ Email
+                        <div class="info-content">
+                            <label>Địa chỉ Email</label>
+                            <p id="userEmail"></p>
                         </div>
-                        <div class="info-item-value">nguyentienson0512@gmail.com</div>
-                        <button class="info-item-edit">
+                        <button class="edit-btn" onclick="editField('email')">
                             <i class='bx bx-edit-alt'></i>
                         </button>
                     </div>
                     <div class="info-item">
-                        <div class="info-item-label">
                             <i class='bx bx-phone'></i>
-                            Số điện thoại
+                        <div class="info-content">
+                            <label>Số điện thoại</label>
+                            <p id="userPhone"></p>
                         </div>
-                        <div class="info-item-value">+84 584466xxx</div>
-                        <button class="info-item-edit">
+                        <button class="edit-btn" onclick="editField('phone')">
                             <i class='bx bx-edit-alt'></i>
                         </button>
                     </div>
                     <div class="info-item">
-                        <div class="info-item-label">
                             <i class='bx bx-map'></i>
-                            Địa chỉ
+                        <div class="info-content">
+                            <label>Địa chỉ</label>
+                            <p id="userAddress"></p>
                         </div>
-                        <div class="info-item-value">Minh Khai, Hai Ba Trung, Ha Noi</div>
-                        <button class="info-item-edit">
+                        <button class="edit-btn" onclick="editField('address')">
                             <i class='bx bx-edit-alt'></i>
                         </button>
                     </div>
@@ -594,49 +574,214 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Menu item click handling
-            const menuItems = document.querySelectorAll('.menu-item');
-            menuItems.forEach(item => {
-                item.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    menuItems.forEach(i => i.classList.remove('active'));
-                    item.classList.add('active');
-                });
-            });
-
-            // Add card button handling
-            const addCardBtn = document.querySelector('.add-card-btn');
-            if (addCardBtn) {
-                addCardBtn.addEventListener('click', () => {
-                    alert('Add new card functionality will be implemented soon!');
-                });
+        // Kiểm tra xác thực ngay khi trang tải
+        function checkAuth() {
+            // Kiểm tra cả hai trường hợp: 'user' và 'currentUser'
+            const user = JSON.parse(localStorage.getItem('currentUser')) || JSON.parse(localStorage.getItem('user'));
+            if (!user) {
+                // Nếu chưa đăng nhập, chuyển hướng về trang đăng nhập
+                window.location.href = 'login.html';
+                return null;
             }
+            return user;
+        }
 
-            // Edit info button handling
-            const editButtons = document.querySelectorAll('.info-item-edit');
-            editButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const infoItem = btn.closest('.info-item');
-                    const label = infoItem.querySelector('.info-item-label').textContent.trim();
-                    const currentValue = infoItem.querySelector('.info-item-value').textContent.trim();
-                    const newValue = prompt(`Edit ${label}:`, currentValue);
-                    
-                    if (newValue && newValue !== currentValue) {
-                        infoItem.querySelector('.info-item-value').textContent = newValue;
-                    }
-                });
-            });
+        // Mảng chứa các avatar có sẵn
+        const avatars = [
+            'assets/img/avatar/avatar-1.png',
+            'assets/img/avatar/avatar-2.png',
+            'assets/img/avatar/avatar-3.png',
+            'assets/img/avatar/avatar-4.png',
+            'assets/img/avatar/avatar-5.png'
+        ];
 
-            // Load user data
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            if (currentUser) {
-                document.querySelector('.user-name').textContent = currentUser.name || 'Nguyễn Sơn';
-                if (currentUser.avatar) {
-                    document.querySelector('#profileAvatar').src = currentUser.avatar;
+        // Hàm lấy avatar ngẫu nhiên hoặc sử dụng avatar đã lưu
+        function getRandomAvatar() {
+            const user = checkAuth();
+            if (user && user.avatar) {
+                return user.avatar;
+            }
+            const randomIndex = Math.floor(Math.random() * avatars.length);
+            return avatars[randomIndex];
+        }
+
+        // Dữ liệu người dùng
+        const userData = {
+            avatar: '',
+            name: '',
+            registeredDate: new Date().toLocaleDateString('vi-VN', {
+                day: 'numeric',
+                month: 'numeric',
+                year: 'numeric'
+            }),
+            email: '',
+            phone: '',
+            address: '',
+            cards: [
+                {
+                    number: '',
+                    holder: '',
+                    expiry: ''
+                }
+            ]
+        };
+
+        // Hàm cập nhật UI với dữ liệu người dùng
+        function updateUserInterface() {
+            const user = checkAuth(); // Kiểm tra xác thực
+            if (!user) return; // Nếu không có user sẽ được chuyển hướng bởi checkAuth
+
+            console.log('User data:', user); // Để debug
+
+            // Cập nhật dữ liệu người dùng từ thông tin đăng nhập
+            userData.avatar = user.avatar || getRandomAvatar();
+            userData.name = user.username || user.name || 'Người dùng';
+            userData.email = user.email || '';
+            userData.phone = user.phone || 'Chưa cập nhật';
+            userData.address = user.address || 'Chưa cập nhật';
+            userData.cards[0].holder = user.username || user.name || 'Người dùng';
+
+            // Cập nhật giao diện
+            document.getElementById('userAvatar').src = userData.avatar;
+            document.getElementById('userName').textContent = userData.name;
+            document.getElementById('userRegistered').textContent = `Đăng ký: ${userData.registeredDate}`;
+            document.getElementById('userEmail').textContent = userData.email;
+            document.getElementById('userPhone').textContent = userData.phone;
+            document.getElementById('userAddress').textContent = userData.address;
+
+            // Cập nhật header dropdown
+            document.getElementById('headerAvatar').src = userData.avatar;
+            document.getElementById('headerUserName').textContent = userData.name;
+            document.getElementById('headerUserEmail').textContent = userData.email;
+
+            // Cập nhật thông tin thẻ
+            document.getElementById('cardNumber1').textContent = '**** **** **** ****';
+            document.getElementById('cardHolder1').textContent = userData.name;
+            document.getElementById('cardExpiry1').textContent = '--/--';
+        }
+
+        // Hàm chỉnh sửa thông tin
+        function editField(field) {
+            const user = checkAuth(); // Kiểm tra xác thực
+            if (!user) return; // Nếu không có user sẽ được chuyển hướng bởi checkAuth
+
+            const currentValue = document.getElementById(`user${field.charAt(0).toUpperCase() + field.slice(1)}`).textContent;
+            // Chỉ cho phép chỉnh sửa số điện thoại và địa chỉ
+            if (field === 'phone' || field === 'address') {
+                const newValue = prompt(`Cập nhật ${field}:`, currentValue);
+                if (newValue && newValue.trim() !== '') {
+                    userData[field] = newValue;
+                    // Cập nhật vào localStorage
+                    const user = JSON.parse(localStorage.getItem('currentUser')) || JSON.parse(localStorage.getItem('user'));
+                    user[field] = newValue;
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    updateUserInterface();
+                }
+            } else {
+                alert('Thông tin này không thể chỉnh sửa trực tiếp');
+            }
+        }
+
+        // Khởi tạo giao diện khi trang tải xong
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded, checking auth...'); // Để debug
+            updateUserInterface();
+
+            // Theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+            
+            // Kiểm tra theme đã lưu
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            htmlElement.setAttribute('data-theme', savedTheme);
+
+            // Cập nhật giao diện toggle button
+            function updateThemeToggle(theme) {
+                if (theme === 'dark') {
+                    themeToggle.classList.add('dark');
+                } else {
+                    themeToggle.classList.remove('dark');
                 }
             }
+
+            // Set initial state
+            updateThemeToggle(savedTheme);
+
+            // Theme toggle click handler
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+                htmlElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeToggle(newTheme);
+            });
         });
+
+        // Thêm styles cho dark mode
+        const darkModeStyles = `
+            [data-theme="dark"] body {
+                background-color: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .profile-sidebar,
+            [data-theme="dark"] .info-item,
+            [data-theme="dark"] .user-info-card {
+                background: #2d2d2d;
+                border-color: #404040;
+            }
+
+            [data-theme="dark"] .menu-item {
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .menu-item:hover,
+            [data-theme="dark"] .menu-item.active {
+                background: rgba(74, 144, 226, 0.2);
+            }
+
+            [data-theme="dark"] .section-title {
+                color: #e0e0e0;
+                border-bottom-color: #404040;
+            }
+
+            [data-theme="dark"] .info-item-label {
+                color: #b0b0b0;
+            }
+
+            [data-theme="dark"] .info-item-value {
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .add-card {
+                background: #2d2d2d;
+                border-color: #404040;
+            }
+
+            [data-theme="dark"] .add-card-btn {
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .add-card-btn i {
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .user-name,
+            [data-theme="dark"] .info-content label {
+                color: #e0e0e0;
+            }
+
+            [data-theme="dark"] .user-registered,
+            [data-theme="dark"] .info-content p {
+                color: #b0b0b0;
+            }
+        `;
+
+        // Thêm styles vào head
+        const styleElement = document.createElement('style');
+        styleElement.textContent = darkModeStyles;
+        document.head.appendChild(styleElement);
     </script>
 </body>
 </html>
