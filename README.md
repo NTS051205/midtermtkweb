@@ -48,7 +48,7 @@ Hệ thống quản lý khóa học trực tuyến được phát triển cho Tr
 
 ## 🌟 Demo
 
-[Link Demo](https://your-demo-link.com)
+[Link Demo]([https://your-demo-link.com](https://nts051205.github.io/lms_test/))
 
 ![Dashboard Preview](assets/img/preview/dashboard.png)
 
@@ -125,7 +125,7 @@ Web_Lms_BTL/
 │   ├── css/         # CSS files
 │   └── js/          # JavaScript files
 ├── pages/
-│   ├── about.html
+│   ├=── about.html
 │   ├── courses.html
 │   ├── login.html
 │   └── ...
@@ -195,13 +195,13 @@ Dự án được phân phối dưới giấy phép MIT. Xem [LICENSE](LICENSE) 
 
 ## ✍️ Tác Giả
 
-- **Tên của bạn** - [GitHub Profile](https://github.com/your-username)
+- **Nguyễn Tiến Sơn** - [GitHub Profile](https://github.com/NTS051205)
 
 ### Liên Hệ
 
-- Email: your.email@example.com
-- Website: [your-website.com](https://your-website.com)
-- GitHub: [@your-username](https://github.com/your-username)
+- Email: 11230489@st.neu.edu.vn.com
+- Website: [nts.com](https://nts051205.github.io/nguyentienson0512/)
+- GitHub: [@NTSON](https://github.com/NTS051205)
 
 ## 🙏 Ghi Nhận Đóng Góp
 
