@@ -1,3 +1,32 @@
+/*
+ * Layout Techniques Attribution
+ * ---------------------------
+ * 1. Flexbox Layout
+ *    Source: CSS-Tricks - A Complete Guide to Flexbox
+ *    URL: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ *    Used in: Navigation bar, Logo container, Navigation links, Auth section
+ *
+ * 2. Grid Layout
+ *    Source: CSS-Tricks - A Complete Guide to Grid
+ *    URL: https://css-tricks.com/snippets/css/complete-guide-grid/
+ *    Used in: Feature grid, Mission grid, Team grid, Stats grid, Course grid
+ *
+ * 3. Split Layout
+ *    Source: CodePen - Split Screen Layout by Traversy Media
+ *    URL: https://codepen.io/bradtraversy/pen/ZEGGNRb
+ *    Used in: Split container, Login/Register pages split view
+ *
+ * 4. Card Layout
+ *    Source: Material Design - Components: Cards
+ *    URL: https://material.io/components/cards
+ *    Used in: Course cards, Feature cards, Team cards, Mission cards
+ *
+ * 5. Timeline Layout
+ *    Source: CodePen - Responsive Timeline by Mary Lou
+ *    URL: https://codepen.io/codyhouse/pen/FdkEf
+ *    Used in: History timeline, Timeline items
+ */
+
 /* Global styles and variables */
 :root {
     --primary-color: #4a90e2;
@@ -1703,18 +1732,26 @@ footer::before {
     text-align: center;
 }
 
-#headerUserName {
+#headerUserName, #userName {
     display: block;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-#headerUserEmail {
+#headerUserEmail, #userEmail {
     display: block;
     font-size: 0.9rem;
     color: var(--text-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    padding: 0 10px;
 }
 
 .dropdown-item {
