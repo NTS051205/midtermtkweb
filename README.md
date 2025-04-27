@@ -1,214 +1,151 @@
-# 🎓 Hệ Thống Quản Lý Khóa Học NEU
+# Learning Management System (LMS) 📚
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](VERSION)
 
-Hệ thống quản lý khóa học trực tuyến được phát triển cho Trường Đại học Kinh tế Quốc dân (NEU), cung cấp nền tảng học tập hiện đại và tiện lợi cho sinh viên và giảng viên.
+## Giới thiệu
+Đây là một hệ thống quản lý học tập (Learning Management System) được xây dựng bằng HTML, CSS và JavaScript. Dự án này cung cấp một nền tảng học tập trực tuyến với nhiều tính năng cho cả người học và giảng viên.
 
-## 📑 Mục Lục
+## Tính năng chính
+- 📚 Quản lý khóa học (Courses Management)
+- 👥 Hệ thống đăng ký và đăng nhập (User Authentication)
+- 📝 Thông tin chi tiết khóa học (Course Details)
+- 📰 Tin tức và thông báo (News)
+- ❓ FAQ (Câu hỏi thường gặp)
+- 📞 Liên hệ và hỗ trợ (Contact Support)
 
-- [Tính Năng Chính](#-tính-năng-chính)
-- [Demo](#-demo)
-- [Công Nghệ Sử Dụng](#-công-nghệ-sử-dụng)
-- [Tương Thích Trình Duyệt](#-tương-thích-trình-duyệt)
-- [Cài Đặt và Sử Dụng](#-cài-đặt-và-sử-dụng)
-- [Cấu Trúc Dự Án](#-cấu-trúc-dự-án)
-- [API Reference](#-api-reference)
-- [Nguồn Gốc Layout](#-nguồn-gốc-layout)
-- [Đóng Góp](#-đóng-góp)
-- [Giấy Phép](#-giấy-phép)
-- [Tác Giả](#-tác-giả)
+## Cấu trúc dự án
+```
+├── index.html          # Trang chủ
+├── courses.html        # Danh sách khóa học
+├── course-detail.html  # Chi tiết khóa học
+├── login.html          # Đăng nhập
+├── register.html       # Đăng ký
+├── about.html         # Giới thiệu
+├── careers.html       # Tuyển dụng
+├── contact.html       # Liên hệ
+├── faq.html           # FAQ
+├── news.html          # Tin tức
+├── style.css          # File CSS chính
+├── style.js           # File JavaScript chính
+└── assets/            # Thư mục chứa tài nguyên
+    ├── favision/      # Icon favicon
+    ├── icon/          # Icons
+    └── img/           # Hình ảnh
+```
 
-## ✨ Tính Năng Chính
+## Hướng dẫn cài đặt
+1. Clone repository này về máy local
+2. Mở file `index.html` bằng trình duyệt web để bắt đầu sử dụng
 
-### 👥 Quản Lý Người Dùng
-- Đăng ký và xác thực tài khoản
-- Quản lý thông tin cá nhân
-- Phân quyền người dùng (Admin/Giảng viên/Sinh viên)
-
-### 📚 Quản Lý Khóa Học
-- Tạo và quản lý khóa học
-- Theo dõi tiến độ học tập
-- Hệ thống đánh giá và chứng chỉ
-- Giỏ hàng và thanh toán khóa học
-
-### 🤝 Tương Tác
-- Chat trực tiếp giữa giảng viên và học viên
-- Diễn đàn thảo luận
-- Hệ thống thông báo
-- FAQ và hỗ trợ
-
-### 📱 Giao Diện
-- Responsive trên mọi thiết bị
-- Giao diện thân thiện, dễ sử dụng
-- Dark/Light mode
-- Đa ngôn ngữ (Tiếng Việt/Tiếng Anh)
-
-## 🌟 Demo
-
-[Link Demo](https://your-demo-link.com)
-
-![Dashboard Preview](assets/img/preview/dashboard.png)
-
-## 🛠 Công Nghệ Sử Dụng
-
-### Frontend
+## Công nghệ sử dụng
 - HTML5
-- CSS3 (Flexbox/Grid)
-- JavaScript (ES6+)
-- LocalStorage API
+- CSS3
+- JavaScript
 - Responsive Design
 
-### UI Components
-- Custom CSS Variables
-- CSS Animations
-- Modern UI/UX principles
-- Material Design inspiration
+## Tính năng chi tiết
+- **Quản lý khóa học**: Xem danh sách khóa học, thông tin chi tiết
+- **Hệ thống tài khoản**: Đăng ký, đăng nhập, quản lý thông tin cá nhân
+- **Tin tức và thông báo**: Cập nhật thông tin mới nhất về khóa học và sự kiện
+- **FAQ**: Giải đáp các câu hỏi thường gặp
+- **Tuyển dụng**: Thông tin về cơ hội việc làm
+- **Hỗ trợ**: Kênh liên hệ và hỗ trợ người dùng
 
-### Development Tools
-- Visual Studio Code
-- Git & GitHub
-- Chrome DevTools
-- Live Server
+## Yêu cầu hệ thống
+- Trình duyệt web hiện đại (Chrome, Firefox, Edge, Safari)
+- Độ phân giải màn hình tối thiểu: 1280 x 720
+- Kết nối internet ổn định
 
-## 💻 Tương Thích Trình Duyệt
+## Lệnh cho nhà phát triển
 
-### Desktop
-| Trình duyệt | Phiên bản tối thiểu |
-|-------------|---------------------|
-| Chrome      | 88+                 |
-| Firefox     | 85+                 |
-| Safari      | 14+                 |
-| Edge        | 88+ (Chromium)      |
-| Opera       | 74+                 |
-
-### Mobile
-| Trình duyệt | Phiên bản tối thiểu |
-|-------------|---------------------|
-| Chrome      | 88+                 |
-| Safari iOS  | 14+                 |
-| Samsung Internet | 15+            |
-| Opera Mobile | 63+                |
-
-## 🚀 Cài Đặt và Sử Dụng
-
-1. Clone dự án:
+### Khởi động dự án
 ```bash
-git clone https://github.com/your-username/Web_Lms_BTL.git
+# Clone dự án
+git clone https://github.com/NTS051205/lms_test.git
+
+# Di chuyển vào thư mục dự án
+cd lms-project
+
+# Cài đặt Live Server (nếu chưa có)
+npm install -g live-server
+
+# Chạy dự án
+live-server
 ```
 
-2. Truy cập thư mục dự án:
+### Kiểm tra mã
 ```bash
-cd Web_Lms_BTL
+# Kiểm tra lỗi HTML
+html-validate *.html
+
+# Kiểm tra lỗi CSS
+stylelint "**/*.css"
+
+# Kiểm tra lỗi JavaScript
+eslint "**/*.js"
 ```
 
-3. Khởi chạy với Live Server hoặc mở file index.html
-
-### Sử dụng Python server:
+### Build và Deploy
 ```bash
-python -m http.server 8000
+# Tối ưu hóa hình ảnh
+npm run optimize-images
+
+# Nén file
+npm run build
+
+# Deploy lên hosting
+npm run deploy
 ```
 
-### Sử dụng Node.js:
-```bash
-npx serve
-```
+## Quy ước đặt tên
+- File HTML: Sử dụng kebab-case (ví dụ: course-detail.html)
+- File CSS/JS: Sử dụng camelCase
+- Class CSS: Sử dụng BEM methodology
+- ID: Sử dụng camelCase
 
-## 📁 Cấu Trúc Dự Án
+## Tối ưu hiệu suất
+- [x] Nén hình ảnh
+- [x] Minify CSS/JS
+- [x] Lazy loading cho hình ảnh
+- [x] Cache browsing
+- [x] Responsive images
 
-```
-Web_Lms_BTL/
-├── assets/
-│   ├── img/         # Hình ảnh và media
-│   ├── css/         # CSS files
-│   └── js/          # JavaScript files
-├── pages/
-│   ├── about.html
-│   ├── courses.html
-│   ├── login.html
-│   └── ...
-├── components/      # Các component tái sử dụng
-├── style.css       # Global styles
-├── style.js        # Global JavaScript
-├── index.html      # Trang chủ
-└── README.md
-```
+## Bảo mật
+- Xác thực người dùng
+- Mã hóa mật khẩu
+- Bảo vệ chống XSS
+- Bảo vệ chống CSRF
+- Rate limiting
 
-## 📌 API Reference
+## Kiểm thử
+- [x] Cross-browser testing
+- [x] Responsive testing
+- [x] Performance testing
+- [x] Security testing
 
-### Quản lý người dùng
-```javascript
-// Đăng ký người dùng mới
-registerUser(userData)
-
-// Đăng nhập
-loginUser(credentials)
-
-// Cập nhật thông tin
-updateProfile(userId, data)
-```
-
-### Quản lý khóa học
-```javascript
-// Thêm khóa học vào giỏ hàng
-addToCart(courseId)
-
-// Đăng ký khóa học
-enrollCourse(courseId, userId)
-
-// Cập nhật tiến độ
-updateProgress(courseId, userId, progress)
-```
-
-## 🎨 Nguồn Gốc Layout
-
-### 1. Flexbox Layout
-- **Nguồn:** CSS-Tricks - A Complete Guide to Flexbox
-- **URL:** https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- **Sử dụng trong:** Navigation, Auth sections
-
-### 2. Grid Layout
-- **Nguồn:** CSS-Tricks - A Complete Guide to Grid
-- **URL:** https://css-tricks.com/snippets/css/complete-guide-grid/
-- **Sử dụng trong:** Course grid, Feature sections
-
-### 3. Card & Timeline Layouts
-- Material Design Components
-- CodePen inspirations
-- Modern UI patterns
-
-## 👥 Đóng Góp
-
-Đóng góp luôn được chào đón! Xem [Contributing Guidelines](CONTRIBUTING.md) để biết thêm chi tiết.
-
+## Contributing
 1. Fork dự án
 2. Tạo branch mới (`git checkout -b feature/AmazingFeature`)
 3. Commit thay đổi (`git commit -m 'Add some AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Mở Pull Request
+5. Tạo Pull Request
 
-## 📄 Giấy Phép
+## Phiên bản
+- v1.0.0 - Release ban đầu
+- v1.0.1 - Cập nhật giao diện responsive
+- v1.1.0 - Thêm tính năng mới
 
-Dự án được phân phối dưới giấy phép MIT. Xem [LICENSE](LICENSE) để biết thêm thông tin.
+## Tác giả
+- **Nguyễn Tiến Sơn** - **NEU**
 
-## ✍️ Tác Giả
+## License
+Dự án này được cấp phép theo giấy phép MIT - xem file [LICENSE](LICENSE) để biết thêm chi tiết.
 
-- **Tên của bạn** - [GitHub Profile](https://github.com/your-username)
-
-### Liên Hệ
-
-- Email: your.email@example.com
-- Website: [your-website.com](https://your-website.com)
-- GitHub: [@your-username](https://github.com/your-username)
-
-## 🙏 Ghi Nhận Đóng Góp
-
-Chân thành cảm ơn:
-- Các tác giả của các layout và component được sử dụng
-- Cộng đồng open-source
-- Giảng viên và sinh viên NEU đã đóng góp ý kiến
-
----
-© 2024 NEU Learning Management System. All Rights Reserved.
+## Ghi chú
+- Dự án này được xây dựng với mục đích học tập
+- Đảm bảo tương thích trên các trình duyệt hiện đại
+- Thiết kế responsive cho trải nghiệm tốt trên mọi thiết bị
