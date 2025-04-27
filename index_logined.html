@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEU Course Management System</title>
+    <title>Hệ thống Quản lý Khóa học của NEU</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -12,13 +12,13 @@
     <header class="header">
         <nav class="nav container">
             <a href="index_logined.html" class="nav__logo">
-                <i class='bx bxs-book-reader'></i> NEU Course Management System
+                <i class='bx bxs-book-reader'></i> Hệ thống Quản lý Khóa học của NEU
             </a>
 
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index_logined.html" class="nav__link active">Home</a>
+                        <a href="index_logined.html" class="nav__link active">Trang chủ</a>
                     </li>
                     <li class="nav__item">
                         <a href="courses.html" class="nav__link">Khóa Học</a>
@@ -34,17 +34,17 @@
                             <img src="assets/img/avatar-default.jpg" alt="User Avatar">
                             <div class="profile-dropdown">
                                 <a href="profile.html" class="dropdown-item">
-                                    <i class='bx bx-user'></i> My Profile
+                                    <i class='bx bx-user'></i>  Hồ sơ của tôi
                                 </a>
                                 <a href="my-courses.html" class="dropdown-item">
-                                    <i class='bx bx-book-open'></i> My Courses
+                                    <i class='bx bx-book-open'></i> Khóa học của tôi
                                 </a>
                                 <a href="settings.html" class="dropdown-item">
-                                    <i class='bx bx-cog'></i> Settings
+                                    <i class='bx bx-cog'></i> Cài đặt 
                                 </a>
                                 <hr>
                                 <a href="index.html" class="dropdown-item logout">
-                                    <i class='bx bx-log-out'></i> Logout
+                                    <i class='bx bx-log-out'></i> Đăng xuất
                                 </a>
                             </div>
                         </div>
@@ -54,43 +54,43 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Add your main content here -->
-    </main>
+    <!-- Nội dung chính -->
+<main>
+    <!-- Thêm nội dung chính của bạn ở đây -->
+</main>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Add your footer content here -->
-    </footer>
-    <script src="style.js"></script>
-    <script>
-        // Check if user is logged in
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            if (!currentUser) {
-                // If no user is logged in, redirect to login page
-                window.location.href = 'login.html';
-                return;
-            }
+<!-- Chân trang -->
+<footer>
+    <!-- Thêm nội dung chân trang ở đây -->
+</footer>
+<script src="style.js"></script>
+<script>
+    // Kiểm tra xem người dùng đã đăng nhập chưa
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) {
+            // Nếu không có người dùng đăng nhập, chuyển hướng đến trang đăng nhập
+            window.location.href = 'login.html';
+            return;
+        }
 
-            // Update avatar and user information
-            const userAvatar = document.querySelector('.user-avatar img');
-            if (currentUser.avatar) {
-                userAvatar.src = currentUser.avatar;
-            } else {
-                // Use default avatar if user doesn't have one
-                userAvatar.src = 'assets/img/avatar/avatar-1.png';
-            }
+        // Cập nhật ảnh đại diện và thông tin người dùng
+        const userAvatar = document.querySelector('.user-avatar img');
+        if (currentUser.avatar) {
+            userAvatar.src = currentUser.avatar;
+        } else {
+            // Sử dụng ảnh đại diện mặc định nếu người dùng không có
+            userAvatar.src = 'assets/img/avatar/avatar-1.png';
+        }
 
-            // Handle logout
-            const logoutBtn = document.querySelector('.logout');
-            logoutBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                localStorage.removeItem('currentUser');
-                window.location.href = 'index.html';
-            });
+        // Xử lý đăng xuất
+        const logoutBtn = document.querySelector('.logout');
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
         });
-    </script>
+    });
+</script>
 </body>
 </html>

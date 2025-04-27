@@ -249,7 +249,7 @@
         <div class="split-left">
             <div class="welcome-text">
                 <h1>Chào Mừng Trở Lại!</h1>
-                <p>Hãy bắt đầu cùng với khóa học NEU Learning nhé!</p>
+                <p>Hãy bắt đầu học với Hệ Thống Quản Lý Khóa Học NEU nhé!</p>
             </div>
             <div class="illustration">
                 <img src="assets/img/profile/anhdangnhap.jpg" alt="Hình minh họa đăng nhập">
@@ -310,7 +310,7 @@
 
     <script src="style.js"></script>
     <script>
-        // Password visibility toggle
+        // Công tắc hiển thị mật khẩu
         function setupPasswordToggle(passwordInput, toggleButton) {
             toggleButton.addEventListener('click', () => {
                 const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -322,7 +322,7 @@
 
         setupPasswordToggle(document.getElementById('password'), document.getElementById('passwordToggle'));
 
-        // Form validation and submission
+       // Xác thực và gửi form
         const loginForm = document.getElementById('loginForm');
         const email = document.getElementById('email');
         const password = document.getElementById('password');
@@ -333,30 +333,30 @@
             const emailValue = email.value.trim();
             const passwordValue = password.value;
             
-            // Basic validation
+           // Xác thực cơ bản
             if (!emailValue || !passwordValue) {
                 alert('Vui lòng điền đầy đủ thông tin');
                 return;
             }
 
-            // Email validation
+             // Xác thực email
             if (!emailValue.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
                 alert('Vui lòng nhập địa chỉ email hợp lệ');
                 return;
             }
             
-            // Check if user exists
+             // Kiểm tra xem người dùng có tồn tại không
             const users = JSON.parse(localStorage.getItem('users')) || [];
             const user = users.find(u => u.email === emailValue && u.password === passwordValue);
             
             if (user) {
-                // Store current user in localStorage
+                // Lưu người dùng hiện tại vào localStorage
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 
-                // Show success message
+                 // Hiển thị thông báo thành công
                 alert('Đăng nhập thành công! Đang chuyển hướng...');
                 
-                // Redirect to index.html after a short delay
+                // Chuyển hướng đến index.html sau một khoảng thời gian ngắn
                 setTimeout(() => {
                     window.location.href = 'index.html';
                 }, 1000);
@@ -365,7 +365,7 @@
             }
         });
 
-        // Social login buttons
+        // Các nút đăng nhập mạng xã hội
         document.querySelectorAll('.social-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 alert('Đăng nhập bằng mạng xã hội sẽ được triển khai sớm!');

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEU Course Management System - Profile</title>
+    <title>Hệ thống Quản lý Khóa học NEU - Hồ sơ</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45' fill='%232196f3'/%3E%3Ctext x='50' y='65' text-anchor='middle' fill='white' font-size='40'%3EN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -37,7 +37,7 @@
             margin-top: 80px;
         }
 
-        /* Sidebar styles */
+      /* Kiểu dáng thanh bên */
         .profile-sidebar {
             width: 280px;
             background: #ffffff;
@@ -120,7 +120,7 @@
             color: var(--primary-color);
         }
 
-        /* Main content styles */
+       /* Kiểu dáng nội dung chính */
         .profile-content {
             flex: 1;
             max-width: 850px;
@@ -135,7 +135,7 @@
             border-bottom: 1px solid #eee;
         }
 
-        /* Cards */
+        /* Thẻ */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -240,7 +240,7 @@
             color: var(--primary-color);
         }
 
-        /* Profile Dropdown Menu Styles */
+        /* Kiểu dáng menu dropdown Hồ sơ người dùng */
         .user-profile {
             position: relative;
             cursor: pointer;
@@ -329,7 +329,7 @@
             color: inherit;
         }
 
-        /* Info Grid Styles */
+       /* Kiểu dáng lưới thông tin */
         .info-grid {
             display: grid;
             gap: 1.5rem;
@@ -392,7 +392,7 @@
                     <circle cx="50" cy="50" r="45" fill="#2196f3"/>
                     <text x="50" y="65" text-anchor="middle" fill="white" font-size="40">N</text>
                 </svg>
-                <span>NEU Course Management System</span>
+                <span>Hệ thống Quản lý Khóa học NEU</span>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <i class="fas fa-bars"></i>
@@ -407,8 +407,6 @@
                 <li><a href="careers.html">Tuyển Dụng</a></li>
                 <!-- Login/Profile section -->
                 <li class="auth-section">
-                    <!-- <a href="login.html" class="login-btn" id="loginButton" style="display: none;">Đăng Nhập</a> -->
-                    <a href="login.html" class="login-btn" id="loginButton">Đăng Nhập</a>
                     <li>
                         <a href="cart.html" class="cart-icon">
                             <i class="fas fa-shopping-cart"></i>
@@ -425,20 +423,20 @@
                             </div>
                             <div class="dropdown-content">
                                 <a href="profile.html" class="dropdown-item active">
-                                    <i class="fas fa-user"></i> Profile
+                                    <i class="fas fa-user"></i> Hồ sơ
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-heart"></i> Favourite list
+                                    <i class="fas fa-heart"></i> Danh sách yêu thích
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-moon"></i> Dark mode
+                                    <i class="fas fa-moon"></i> Chế độ tối
                                 </a>
                                 <a href="#" class="dropdown-item">
-                                    <i class="fas fa-cog"></i> Settings
+                                    <i class="fas fa-cog"></i> Cài đặt
                                 </a>
                                 <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #eee;">
                                 <a href="#" class="dropdown-item logout" id="logoutButton">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> Đăng xuât
                                 </a>
                             </div>
                         </div>
@@ -454,70 +452,71 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="profile-container">
-        <!-- Sidebar -->
+    <!-- Nội dung chính -->
+         <main class="profile-container">
+    <!-- Thanh bên -->
+
         <div class="profile-sidebar">
             <div class="user-info-card">
                 <div class="user-avatar">
                     <img src="assets/img/avatar/avatar-1.png" alt="User Avatar" id="profileAvatar">
                 </div>
                 <h2 class="user-name">Nguyễn Sơn</h2>
-                <p class="user-registered">Registered: 17th May 2022</p>
+                <p class="user-registered">Đăng ký: Ngày 17 tháng 5 năm 2022</p>
             </div>
             <div class="sidebar-menu">
                 <a href="#manage-account" class="menu-item active">
                     <i class='bx bx-user'></i>
-                    <span>Personal info</span>
+                    <span>Thông tin cá nhân</span>
                 </a>
                 <a href="#addresses" class="menu-item">
                     <i class='bx bx-map'></i>
-                    <span>Addresses</span>
+                    <span>Địa chỉ</span>
                 </a>
                 <a href="#communications" class="menu-item">
                     <i class='bx bx-bell'></i>
-                    <span>Notifications</span>
+                    <span>Thông báo</span>
                 </a>
                 <a href="#my-courses" class="menu-item">
                     <i class='bx bx-book-open'></i>
-                    <span>My Courses</span>
+                    <span>Khóa học của tôi</span>
                 </a>
                 <a href="#my-certificates" class="menu-item">
                     <i class='bx bx-certification'></i>
-                    <span>Certificates</span>
+                    <span>Chứng chỉ</span>
                 </a>
                 <a href="#favorites" class="menu-item">
                     <i class='bx bx-heart'></i>
-                    <span>Favorites</span>
+                    <span>Yêu Thích</span>
                 </a>
                 <hr style="margin: 1rem 0; border: none; border-top: 1px solid #f0f0f0;">
                 <a href="#help" class="menu-item">
                     <i class='bx bx-help-circle'></i>
-                    <span>Help Center</span>
+                    <span>Trung tập trợ giúp</span>
                 </a>
                 <a href="#settings" class="menu-item">
                     <i class='bx bx-cog'></i>
-                    <span>Settings</span>
+                    <span>Cài đặt</span>
                 </a>
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- Nội dung chính -->
         <div class="profile-content">
-            <!-- Payment Methods -->
+            <!-- Phương thức thanh toán -->
             <section id="payment-methods">
-                <h2 class="section-title">Payment Methods</h2>
+                <h2 class="section-title">Phương thức thanh toán</h2>
                 <div class="cards-grid">
                     <div class="credit-card">
                         <div class="card-content">
                             <div class="card-number">**** **** **** 3456</div>
                             <div class="card-info">
                                 <div class="card-holder">
-                                    <span class="label">Card Holder</span>
+                                    <span class="label">Chủ thẻ</span>
                                     <span class="value">Nguyễn Sơn</span>
                                 </div>
                                 <div class="card-expiry">
-                                    <span class="label">Expires</span>
+                                    <span class="label">Hết hạn</span>
                                     <span class="value">10/25</span>
                                 </div>
                             </div>
@@ -532,11 +531,11 @@
                             <div class="card-number">**** **** **** 7654</div>
                             <div class="card-info">
                                 <div class="card-holder">
-                                    <span class="label">Card Holder</span>
+                                    <span class="label">Chủ thẻ</span>
                                     <span class="value">Nguyễn Sơn</span>
                                 </div>
                                 <div class="card-expiry">
-                                    <span class="label">Expires</span>
+                                    <span class="label">Hết hạn</span>
                                     <span class="value">03/26</span>
                                 </div>
                             </div>
@@ -549,20 +548,20 @@
                     <div class="add-card">
                         <button class="add-card-btn">
                             <i class="fas fa-plus"></i>
-                            <span>Add New Card</span>
+                            <span>Thêm thẻ mới</span>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <!-- Account Info -->
+            <!-- Thông tin tài khoản-->
             <section id="account-info">
-                <h2 class="section-title">Account Information</h2>
+                <h2 class="section-title">Thông tin tài khoản</h2>
                 <div class="info-grid">
                     <div class="info-item">
                         <div class="info-item-label">
                             <i class='bx bx-envelope'></i>
-                            Email Address
+                            Địa chỉ Email
                         </div>
                         <div class="info-item-value">nguyentienson0512@gmail.com</div>
                         <button class="info-item-edit">
@@ -572,7 +571,7 @@
                     <div class="info-item">
                         <div class="info-item-label">
                             <i class='bx bx-phone'></i>
-                            Phone Number
+                            Số điện thoại
                         </div>
                         <div class="info-item-value">+84 584466xxx</div>
                         <button class="info-item-edit">
@@ -582,7 +581,7 @@
                     <div class="info-item">
                         <div class="info-item-label">
                             <i class='bx bx-map'></i>
-                            Address
+                            Địa chỉ
                         </div>
                         <div class="info-item-value">Minh Khai, Hai Ba Trung, Ha Noi</div>
                         <button class="info-item-edit">
