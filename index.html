@@ -36,8 +36,8 @@
                             <img src="assets/img/avatar/avatar-1.png" alt="Ảnh đại diện người dùng" id="userAvatar">
                             <div class="profile-dropdown">
                                 <div class="dropdown-header">
-                                    <span id="userName">John Smith</span>
-                                    <span id="userEmail">@johnsmith</span>
+                                    <span id="userName">Nguyen Van A</span>
+                                    <span id="userEmail">@nguyenvana</span>
                                 </div>
                                 <a href="profile.html" class="dropdown-item">
                                     <i class="fas fa-user"></i> Hồ sơ
@@ -71,15 +71,35 @@
 
     <main>
         <section class="hero">
+            <div class="hero-slideshow">
+                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1526498460520-4c246339dccb')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c')"></div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1544383835-bda2bc66a55d')"></div>
+            </div>
             <div class="hero-content">
                 <h1>Chào mừng đến với Hệ Thống Quản Lý Khóa Học NEU</h1>
                 <p>Nâng cao tri thức thông qua giáo dục chất lượng</p>
                 <a href="courses.html" class="cta-button">Khám Phá Khóa Học</a>
             </div>
+            <div class="hero-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slide-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
         </section>
 
         <section class="features">
-            <h2>Tại sao chọn chúng tôi?</h2>
+            <h2 style="text-align: center;">Tại sao chọn chúng tôi?</h2>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class="fas fa-graduation-cap"></i>
@@ -99,10 +119,10 @@
             </div>
         </section>
 
-        <section class="popular-courses">
+        <section class="popular-courses" style="padding-top: 4rem; padding-bottom: 2rem;">
             <h2>Khóa Học Phổ Biến</h2>
             <div class="course-grid">
-                <!-- Course cards will be dynamically loaded -->
+               <!-- Thẻ khóa học sẽ được tải động -->
             </div>
         </section>
     </main>
