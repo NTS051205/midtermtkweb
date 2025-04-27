@@ -2070,3 +2070,254 @@ hr {
         font-size: 1rem;
     }
 }
+
+/* Split Layout Styles */
+.split-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.split-left {
+    flex: 0.4;
+    padding: 60px;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+}
+
+.split-right {
+    flex: 0.6;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #1a1a2e 75%, #16213e 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+}
+
+.welcome-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.illustration {
+    max-width: 70%;
+    margin: 20px auto 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+@media (max-width: 992px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .split-left, .split-right {
+        flex: 1;
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .split-right {
+        clip-path: none;
+        padding-top: 40px;
+    }
+
+    .welcome-text {
+        padding-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .illustration {
+        max-width: 60%;
+        margin: 15px auto;
+    }
+
+    .illustration img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .split-left, .split-right {
+        padding: 20px 15px;
+    }
+
+    .welcome-text {
+        padding-top: 10px;
+    }
+
+    .welcome-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-text p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+
+    .illustration {
+        max-width: 85%;
+        margin: 10px auto;
+    }
+
+    .illustration img {
+        max-height: 250px;
+    }
+}
+
+/* Form Styles */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.form-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-switch p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+.auth-switch a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
