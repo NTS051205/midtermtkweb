@@ -167,6 +167,7 @@
 
     <script src="style.js"></script>
     <script src="courses-data.js"></script>
+    <script src="cart-manager.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Get course details from URL parameters
@@ -181,7 +182,8 @@
             }
 
             // Update cart count on page load
-            updateCartCount();
+            const cartManager = new CartManager();
+            cartManager.updateCartCount();
 
             // Get DOM elements
             const confirmBtn = document.getElementById('confirmBtn');
@@ -193,7 +195,7 @@
 
             // Handle confirm button click
             confirmBtn.addEventListener('click', function() {
-                const added = addToCart(courseId);
+                const added = cartManager.addToCart(courseId, course);
 
                 if (added) {
                     // Show success message
@@ -221,18 +223,6 @@
                 window.location.href = `course-detail.html?id=${courseId}`;
             });
         });
-
-        // Function to update cart count
-        function updateCartCount() {
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            const cartCount = cartItems.length;
-
-            // Update all cart count elements
-            const cartCountElements = document.querySelectorAll('.cart-count');
-            cartCountElements.forEach(element => {
-                element.textContent = cartCount;
-            });
-        }
     </script>
 </body>
 </html> 
