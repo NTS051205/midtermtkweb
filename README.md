@@ -50,7 +50,6 @@ Hệ thống quản lý khóa học trực tuyến được phát triển cho Tr
 
 [Link Demo]([https://your-demo-link.com](https://nts051205.github.io/lms_test/))
 
-![Dashboard Preview](assets/img/preview/dashboard.png)
 
 ## 🛠 Công Nghệ Sử Dụng
 
@@ -199,7 +198,7 @@ Dự án được phân phối dưới giấy phép MIT. Xem [LICENSE](LICENSE) 
 
 ### Liên Hệ
 
-- Email: 11230489@st.neu.edu.vn.com
+- Email: 11230489@st.neu.edu.vn
 - Website: [nts.com](https://nts051205.github.io/nguyentienson0512/)
 - GitHub: [@NTSON](https://github.com/NTS051205)
 
