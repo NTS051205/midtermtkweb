@@ -40,12 +40,20 @@
         }
 
         .enrollment-card {
-            background: white;
+            background: var(--card-bg);
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 100px;
+        }
+
+        [data-theme="light"] .enrollment-card {
+            background: white;
+        }
+
+        [data-theme="dark"] .enrollment-card {
+            background: #2d2e30;
         }
 
         .price-tag {
