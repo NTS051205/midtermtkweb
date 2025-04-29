@@ -48,7 +48,7 @@ Hệ thống quản lý khóa học trực tuyến được phát triển cho Tr
 
 ## 🌟 Demo
 
-[Link Demo]([https://your-demo-link.com](https://nts051205.github.io/midtermtkweb/))
+[Link Demo]([https://nts051205.github.io/midtermtkweb/])
 
 
 ## 🛠 Công Nghệ Sử Dụng
