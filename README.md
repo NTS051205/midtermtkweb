@@ -48,7 +48,7 @@ Hệ thống quản lý khóa học trực tuyến được phát triển cho Tr
 
 ## 🌟 Demo
 
-[Link Demo]([https://your-demo-link.com](https://nts051205.github.io/lms_test/))
+[Link Demo]([https://your-demo-link.com](https://nts051205.github.io/midtermtkweb/))
 
 
 ## 🛠 Công Nghệ Sử Dụng
@@ -95,7 +95,7 @@ Hệ thống quản lý khóa học trực tuyến được phát triển cho Tr
 
 1. Clone dự án:
 ```bash
-git clone https://github.com/your-username/Web_Lms_BTL.git
+git clone [https://github.com/NTS051205/midtermtkweb.git]
 ```
 
 2. Truy cập thư mục dự án:
@@ -210,4 +210,4 @@ Chân thành cảm ơn:
 - Giảng viên và sinh viên NEU đã đóng góp ý kiến
 
 ---
-© 2024 NEU Learning Management System. All Rights Reserved.
+© 2025 NEU Learning Management System. All Rights Reserved.
