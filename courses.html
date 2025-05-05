@@ -109,13 +109,15 @@
         }
 
         .course-card {
-            background: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform var(--transition-speed);
-            color: var(--text-color);
-        }
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform var(--transition-speed);
+    color: var(--text-color);
+    display: flex; /* Thêm Flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+}
 
         .course-card:hover {
             transform: translateY(-10px);
@@ -127,10 +129,23 @@
             object-fit: cover;
         }
 
-        .course-content {
+        /* .course-content {
             padding: 1.5rem;
-        }
-
+        } */
+        .course-content {
+    padding: 1.5rem;
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+.course-content p {
+    flex-grow: 1; 
+}
+.cta-button {
+    align-self: flex-start; 
+    margin-top: auto; 
+}
         .course-tags {
             display: flex;
             gap: 0.5rem;
