@@ -1,126 +1,213 @@
-# 🎯 Dijkstra Algorithm & Maze Game
+# 🎓 Hệ Thống Quản Lý Khóa Học NEU
 
-[![GitHub stars](https://img.shields.io/github/stars/DucMinhh1234567/Dijkstra-visualizer-2.0?style=social)](https://github.com/DucMinhh1234567/Dijkstra-visualizer-2.0/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DucMinhh1234567/Dijkstra-visualizer-2.0?style=social)](https://github.com/DucMinhh1234567/Dijkstra-visualizer-2.0/network/members)
-[![GitHub license](https://img.shields.io/github/license/DucMinhh1234567/Dijkstra-visualizer-2.0)](https://github.com/DucMinhh1234567/Dijkstra-visualizer-2.0/blob/main/LICENSE)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3.org/html/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-Một ứng dụng web tương tác để trực quan hóa thuật toán Dijkstra và chơi game mê cung. Dự án này giúp người dùng hiểu rõ hơn về cách thuật toán Dijkstra hoạt động thông qua việc trực quan hóa từng bước thực hiện.
+Hệ thống quản lý khóa học trực tuyến được phát triển cho Trường Đại học Kinh tế Quốc dân (NEU), cung cấp nền tảng học tập hiện đại và tiện lợi cho sinh viên và giảng viên.
 
 ## 📑 Mục Lục
 
-- [🔗 Links](#-links)
-- [✨ Tính Năng Chính](#-tính-năng-chính)
-  - [🎨 Trực quan hóa thuật toán Dijkstra](#1--trực-quan-hóa-thuật-toán-dijkstra)
-  - [🎮 Game Mê Cung](#2--game-mê-cung)
-  - [🛠️ Sandbox Đường Đi Ngắn Nhất](#3--sandbox-đường-đi-ngắn-nhất)
-- [💻 Cài Đặt](#-cài-đặt)
-- [🎮 Cách Sử Dụng](#-cách-sử-dụng)
-  - [Trực quan hóa Dijkstra](#trực-quan-hóa-dijkstra)
-  - [Game Mê Cung](#game-mê-cung)
-  - [Sandbox](#sandbox)
-- [📁 Cấu Trúc Dự Án](#-cấu-trúc-dự-án)
-- [🛠️ Công Nghệ Sử Dụng](#-công-nghệ-sử-dụng)
-- [📄 Giấy Phép](#-giấy-phép)
-
-## 🔗 Links
-
-- 🌐 [Demo Website](https://ducminhh1234567.github.io/Dijkstra-visualizer-2.0/)
-- 📦 [GitHub Repository](https://github.com/DucMinhh1234567/Dijkstra-visualizer-2.0)
-- 👤 [GitHub Profile](https://github.com/DucMinhh1234567)
+- [Tính Năng Chính](#-tính-năng-chính)
+- [Demo](#-demo)
+- [Công Nghệ Sử Dụng](#-công-nghệ-sử-dụng)
+- [Tương Thích Trình Duyệt](#-tương-thích-trình-duyệt)
+- [Cài Đặt và Sử Dụng](#-cài-đặt-và-sử-dụng)
+- [Cấu Trúc Dự Án](#-cấu-trúc-dự-án)
+- [API Reference](#-api-reference)
+- [Nguồn Gốc Layout](#-nguồn-gốc-layout)
+- [Đóng Góp](#-đóng-góp)
+- [Giấy Phép](#-giấy-phép)
+- [Tác Giả](#-tác-giả)
 
 ## ✨ Tính Năng Chính
 
-### 1. 🎨 Trực quan hóa thuật toán Dijkstra
-- 📊 Hiển thị đồ thị tương tác với các đỉnh và cạnh có trọng số
-- 🎯 Trực quan hóa từng bước của thuật toán Dijkstra
-- ⚙️ Chế độ chạy tự động và thủ công (từng bước)
-- 🎮 Điều chỉnh tốc độ animation
-- 📝 Hiển thị code thuật toán với highlight từng bước
-- 📊 Hiển thị mảng khoảng cách và trạng thái đã thăm
-- 📋 Log chi tiết các bước thực hiện
+### 👥 Quản Lý Người Dùng
+- Đăng ký và xác thực tài khoản
+- Quản lý thông tin cá nhân
+- Phân quyền người dùng (Admin/Giảng viên/Sinh viên)
 
-### 2. 🎮 Game Mê Cung
-- 🎲 Tạo mê cung ngẫu nhiên
-- 🎯 Đặt điểm bắt đầu và điểm đích
-- 🧱 Thêm tường và bom
-- ✏️ Vẽ đường đi
-- 💡 Hiển thị lời giải
-- 📊 Thống kê số bước đi, số bom gặp phải, điểm số
+### 📚 Quản Lý Khóa Học
+- Tạo và quản lý khóa học
+- Theo dõi tiến độ học tập
+- Hệ thống đánh giá và chứng chỉ
+- Giỏ hàng và thanh toán khóa học
 
-### 3. 🛠️ Sandbox Đường Đi Ngắn Nhất
-- ➕ Thêm/xóa đỉnh và cạnh
-- ⚖️ Đặt trọng số cho cạnh
-- 🚀 Chạy thuật toán Dijkstra
-- 📊 Hiển thị kết quả chi tiết
+### 🤝 Tương Tác
+- Chat trực tiếp giữa giảng viên và học viên
+- Diễn đàn thảo luận
+- Hệ thống thông báo
+- FAQ và hỗ trợ
 
-## 💻 Cài Đặt
+### 📱 Giao Diện
+- Responsive trên mọi thiết bị
+- Giao diện thân thiện, dễ sử dụng
+- Dark/Light mode
+- Đa ngôn ngữ (Tiếng Việt/Tiếng Anh)
 
-1. Clone repository:
+## 🌟 Demo
+
+[Link Demo]([https://nts051205.github.io/midtermtkweb/])
+
+
+## 🛠 Công Nghệ Sử Dụng
+
+### Frontend
+- HTML5
+- CSS3 (Flexbox/Grid)
+- JavaScript (ES6+)
+- LocalStorage API
+- Responsive Design
+
+### UI Components
+- Custom CSS Variables
+- CSS Animations
+- Modern UI/UX principles
+- Material Design inspiration
+
+### Development Tools
+- Visual Studio Code
+- Git & GitHub
+- Chrome DevTools
+- Live Server
+
+## 💻 Tương Thích Trình Duyệt
+
+### Desktop
+| Trình duyệt | Phiên bản tối thiểu |
+|-------------|---------------------|
+| Chrome      | 88+                 |
+| Firefox     | 85+                 |
+| Safari      | 14+                 |
+| Edge        | 88+ (Chromium)      |
+| Opera       | 74+                 |
+
+### Mobile
+| Trình duyệt | Phiên bản tối thiểu |
+|-------------|---------------------|
+| Chrome      | 88+                 |
+| Safari iOS  | 14+                 |
+| Samsung Internet | 15+            |
+| Opera Mobile | 63+                |
+
+## 🚀 Cài Đặt và Sử Dụng
+
+1. Clone dự án:
 ```bash
-git clone https://github.com/DucMinhh1234567/Dijkstra-visualizer-2.0.git
+git clone [https://github.com/NTS051205/midtermtkweb.git]
 ```
 
-2. Mở file `index.html` trong trình duyệt web hiện đại
+2. Truy cập thư mục dự án:
+```bash
+cd Web_Lms_BTL
+```
 
-## 🎮 Cách Sử Dụng
+3. Khởi chạy với Live Server hoặc mở file index.html
 
-### Trực quan hóa Dijkstra
-1. Mở file `index.html`
-2. Sử dụng các nút điều khiển:
-   - 🆕 "Tạo Đồ Thị Mới": Tạo đồ thị ngẫu nhiên
-   - ▶️ "Chạy Thuật Toán": Chạy thuật toán Dijkstra
-   - ⚡ "Tốc độ": Điều chỉnh tốc độ animation
-   - 🔄 "Chế độ": Chọn chế độ chạy (Tự động/Thủ công)
-3. Click vào các đỉnh để chọn điểm bắt đầu (xanh lá) và điểm kết thúc (đỏ)
+### Sử dụng Python server:
+```bash
+python -m http.server 8000
+```
 
-### Game Mê Cung
-1. Chuyển sang tab "Maze Game"
-2. Sử dụng các công cụ:
-   - 🎯 Đặt điểm bắt đầu và điểm đích
-   - 🧱 Thêm tường và bom
-   - ✏️ Vẽ đường đi
-3. Sử dụng các nút thao tác:
-   - 🎲 Tạo mê cung ngẫu nhiên
-   - 💡 Hiện lời giải
-   - 🗑️ Xóa đường đi/mê cung
-
-### Sandbox
-1. Chuyển sang tab "Shortest Path Sandbox"
-2. Sử dụng các công cụ:
-   - ➕ Thêm đỉnh: Click vào khung vẽ
-   - 🔗 Thêm cạnh: Kéo từ đỉnh này sang đỉnh khác
-   - 🎯 Đặt điểm bắt đầu: Click đúp vào đỉnh
-   - 🎯 Đặt điểm kết thúc: Click phải vào đỉnh
+### Sử dụng Node.js:
+```bash
+npx serve
+```
 
 ## 📁 Cấu Trúc Dự Án
 
 ```
-├── index.html          # Trang chính
-├── maze.html          # Trang game mê cung
-├── graph.js           # Xử lý đồ thị và thuật toán Dijkstra
-├── maze.js            # Logic game mê cung
-├── sandbox.js         # Xử lý sandbox
-├── code.js            # Code mẫu và hiển thị
-├── maze.css           # Styles cho game mê cung
-└── styles.css         # Styles chung
+Web_Lms_BTL/
+├── assets/
+│   ├── img/         # Hình ảnh và media
+│   ├── css/         # CSS files
+│   └── js/          # JavaScript files
+├── pages/
+│   ├=── about.html
+│   ├── courses.html
+│   ├── login.html
+│   └── ...
+├── components/      # Các component tái sử dụng
+├── style.css       # Global styles
+├── style.js        # Global JavaScript
+├── index.html      # Trang chủ
+└── README.md
 ```
 
-## 🛠️ Công Nghệ Sử Dụng
+## 📌 API Reference
 
-- 💻 **Frontend**:
-  - HTML5
-  - CSS3
-  - JavaScript (ES6+)
-  - D3.js v7 cho visualization
-- 🎨 **UI/UX**:
-  - Responsive Design
-  - Interactive Visualizations
-  - Modern UI Components
-- 🚀 **Performance**:
-  - RequestAnimationFrame cho animations
-  - Optimized Rendering
-  - Efficient Data Structures
+### Quản lý người dùng
+```javascript
+// Đăng ký người dùng mới
+registerUser(userData)
+
+// Đăng nhập
+loginUser(credentials)
+
+// Cập nhật thông tin
+updateProfile(userId, data)
+```
+
+### Quản lý khóa học
+```javascript
+// Thêm khóa học vào giỏ hàng
+addToCart(courseId)
+
+// Đăng ký khóa học
+enrollCourse(courseId, userId)
+
+// Cập nhật tiến độ
+updateProgress(courseId, userId, progress)
+```
+
+## 🎨 Nguồn Gốc Layout
+
+### 1. Flexbox Layout
+- **Nguồn:** CSS-Tricks - A Complete Guide to Flexbox
+- **URL:** https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- **Sử dụng trong:** Navigation, Auth sections
+
+### 2. Grid Layout
+- **Nguồn:** CSS-Tricks - A Complete Guide to Grid
+- **URL:** https://css-tricks.com/snippets/css/complete-guide-grid/
+- **Sử dụng trong:** Course grid, Feature sections
+
+### 3. Card & Timeline Layouts
+- Material Design Components
+- CodePen inspirations
+- Modern UI patterns
+
+## 👥 Đóng Góp
+
+Đóng góp luôn được chào đón! Xem [Contributing Guidelines](CONTRIBUTING.md) để biết thêm chi tiết.
+
+1. Fork dự án
+2. Tạo branch mới (`git checkout -b feature/AmazingFeature`)
+3. Commit thay đổi (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Mở Pull Request
 
 ## 📄 Giấy Phép
 
-Dự án này được cấp phép theo giấy phép MIT - xem file [LICENSE](LICENSE) để biết thêm chi tiết. 
+Dự án được phân phối dưới giấy phép MIT. Xem [LICENSE](LICENSE) để biết thêm thông tin.
+
+## ✍️ Tác Giả
+
+- **Nguyễn Tiến Sơn** - [GitHub Profile](https://github.com/NTS051205)
+
+### Liên Hệ
+
+- Email: 11230489@st.neu.edu.vn
+- Website: [nts.com](https://nts051205.github.io/nguyentienson0512/)
+- GitHub: [@NTSON](https://github.com/NTS051205)
+
+## 🙏 Ghi Nhận Đóng Góp
+
+Chân thành cảm ơn:
+- Các tác giả của các layout và component được sử dụng
+- Cộng đồng open-source
+- Giảng viên và sinh viên NEU đã đóng góp ý kiến
+
+---
+© 2025 NEU Learning Management System. All Rights Reserved.
