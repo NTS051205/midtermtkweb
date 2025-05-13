@@ -195,6 +195,7 @@ Dự án được phân phối dưới giấy phép MIT. Xem [LICENSE](LICENSE) 
 ## ✍️ Tác Giả
 
 - **Nguyễn Tiến Sơn** - [GitHub Profile](https://github.com/NTS051205)
+- **Co-Author**: Trần Đức Minh - [GitHub Profile](https://github.com/DucMinhh1234567)
 
 ### Liên Hệ
 
